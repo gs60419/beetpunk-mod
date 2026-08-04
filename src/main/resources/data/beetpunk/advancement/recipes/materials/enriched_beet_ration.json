@@ -1,0 +1,15 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_beet_ration": {
+      "conditions": {"items": [{"items": "beetpunk:beet_ration"}]},
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {"recipe": "beetpunk:enriched_beet_ration"},
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [["has_the_recipe","has_beet_ration"]],
+  "rewards": {"recipes": ["beetpunk:enriched_beet_ration"]}
+}

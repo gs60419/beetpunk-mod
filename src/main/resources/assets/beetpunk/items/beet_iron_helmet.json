@@ -1,0 +1,6 @@
+{
+    "model":  {
+                  "type":  "minecraft:model",
+                  "model":  "beetpunk:item/beet_iron_helmet"
+              }
+}

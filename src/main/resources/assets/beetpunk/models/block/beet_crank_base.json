@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "beetpunk:block/beet_crank_base_bottom",
+    "up": "beetpunk:block/beet_crank_base_top",
+    "north": "beetpunk:block/beet_crank_base_side",
+    "south": "beetpunk:block/beet_crank_base_side",
+    "west": "beetpunk:block/beet_crank_base_side",
+    "east": "beetpunk:block/beet_crank_base_side",
+    "particle": "beetpunk:block/beet_crank_base_side"
+  }
+}

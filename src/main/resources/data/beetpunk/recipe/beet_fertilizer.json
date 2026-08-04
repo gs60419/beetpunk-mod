@@ -1,0 +1,12 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        "beetpunk:beet_oil",
+                        "beetpunk:beet_residue",
+                        "minecraft:beetroot_seeds"
+                    ],
+    "result":  {
+                   "id":  "beetpunk:beet_fertilizer",
+                   "count":  2
+               }
+}

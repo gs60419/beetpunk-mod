@@ -1,0 +1,33 @@
+﻿{
+    "parent":  "minecraft:recipes/root",
+    "criteria":  {
+                     "has_input":  {
+                                       "trigger":  "minecraft:inventory_changed",
+                                       "conditions":  {
+                                                          "items":  [
+                                                                        {
+                                                                            "items":  "beetpunk:soil_scripture_iii"
+                                                                        }
+                                                                    ]
+                                                      }
+                                   },
+                     "has_the_recipe":  {
+                                            "trigger":  "minecraft:recipe_unlocked",
+                                            "conditions":  {
+                                                               "recipe":  "beetpunk:soil_scripture_iv"
+                                                           }
+                                        }
+                 },
+    "requirements":  [
+                         [
+                             "has_input",
+                             "has_the_recipe"
+                         ]
+                     ],
+    "rewards":  {
+                    "recipes":  [
+                                    "beetpunk:soil_scripture_iv"
+                                ]
+                },
+    "sends_telemetry_event":  false
+}

@@ -1,0 +1,25 @@
+{
+  "parent": "beetpunk:craft_water_scripture",
+  "criteria": {
+    "sealed": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.beetpunk.seal_water_temple.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "beetpunk:water_temple_core"
+    },
+    "title": {
+      "translate": "advancements.beetpunk.seal_water_temple.title"
+    }
+  },
+  "requirements": [
+    [
+      "sealed"
+    ]
+  ]
+}

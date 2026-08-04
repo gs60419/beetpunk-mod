@@ -1,0 +1,6 @@
+{
+    "model":  {
+                  "type":  "minecraft:model",
+                  "model":  "beetpunk:item/leaf_temple_core"
+              }
+}

@@ -1,0 +1,7 @@
+﻿{
+  "parent": "minecraft:block/cube_column_uv_locked_y",
+  "textures": {
+    "end": "beetpunk:block/beet_stalk_block_top",
+    "side": "beetpunk:block/beet_stalk_block"
+  }
+}

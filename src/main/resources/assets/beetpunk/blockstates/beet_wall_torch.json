@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "beetpunk:block/beet_wall_torch"
+    },
+    "facing=north": {
+      "model": "beetpunk:block/beet_wall_torch",
+      "y": 270
+    },
+    "facing=south": {
+      "model": "beetpunk:block/beet_wall_torch",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "beetpunk:block/beet_wall_torch",
+      "y": 180
+    }
+  }
+}

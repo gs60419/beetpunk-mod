@@ -1,0 +1,32 @@
+﻿{
+    "parent":  "beetpunk:seal_dye_temple",
+    "criteria":  {
+                     "has_glyph":  {
+                                       "conditions":  {
+                                                          "items":  [
+                                                                        {
+                                                                            "items":  "beetpunk:pig_glyph"
+                                                                        }
+                                                                    ]
+                                                      },
+                                       "trigger":  "minecraft:inventory_changed"
+                                   }
+                 },
+    "display":  {
+                    "description":  {
+                                        "translate":  "advancements.beetpunk.find_pig_glyph.description"
+                                    },
+                    "icon":  {
+                                 "count":  1,
+                                 "id":  "beetpunk:pig_glyph"
+                             },
+                    "title":  {
+                                  "translate":  "advancements.beetpunk.find_pig_glyph.title"
+                              }
+                },
+    "requirements":  [
+                         [
+                             "has_glyph"
+                         ]
+                     ]
+}

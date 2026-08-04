@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "beetpunk:beet_gravel",
+    "beetpunk:beet_sand",
+    "beetpunk:beet_soil",
+    "beetpunk:beet_farmland",
+    "beetpunk:fertilized_beet_soil",
+    "beetpunk:fertilized_beet_farmland"
+  ]
+}

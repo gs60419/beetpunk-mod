@@ -1,0 +1,32 @@
+﻿{
+    "parent":  "minecraft:recipes/root",
+    "criteria":  {
+                     "has_beet_cobblestone":  {
+                                                  "conditions":  {
+                                                                     "items":  [
+                                                                                   {
+                                                                                       "items":  "beetpunk:beet_cobblestone"
+                                                                                   }
+                                                                               ]
+                                                                 },
+                                                  "trigger":  "minecraft:inventory_changed"
+                                              },
+                     "has_the_recipe":  {
+                                            "conditions":  {
+                                                               "recipe":  "beetpunk:beet_cobblestone_wall"
+                                                           },
+                                            "trigger":  "minecraft:recipe_unlocked"
+                                        }
+                 },
+    "requirements":  [
+                         [
+                             "has_the_recipe",
+                             "has_beet_cobblestone"
+                         ]
+                     ],
+    "rewards":  {
+                    "recipes":  [
+                                    "beetpunk:beet_cobblestone_wall"
+                                ]
+                }
+}

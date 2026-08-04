@@ -1,0 +1,18 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "PPP",
+                    "LBL",
+                    "S S"
+                ],
+    "key":  {
+                "P":  "beetpunk:beet_plank_block",
+                "L":  "beetpunk:beet_leaf",
+                "B":  "minecraft:beetroot",
+                "S":  "beetpunk:beet_stick"
+            },
+    "result":  {
+                   "id":  "beetpunk:beet_trading_table",
+                   "count":  1
+               }
+}

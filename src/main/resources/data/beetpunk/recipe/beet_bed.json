@@ -1,0 +1,14 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "CCC",
+                    "PPP"
+                ],
+    "key":  {
+                "C":  "beetpunk:beet_cloth_block",
+                "P":  "beetpunk:beet_plank_block"
+            },
+    "result":  {
+                   "id":  "beetpunk:beet_bed"
+               }
+}

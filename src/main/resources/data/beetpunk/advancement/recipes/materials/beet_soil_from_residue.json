@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_beet_residue": {
+      "conditions": {
+        "items": [
+          {
+            "items": "beetpunk:beet_residue"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "beetpunk:beet_soil_from_residue"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_beet_residue"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "beetpunk:beet_soil_from_residue"
+    ]
+  }
+}

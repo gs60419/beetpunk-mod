@@ -1,0 +1,32 @@
+﻿{
+    "parent":  "beetpunk:seal_light_temple",
+    "criteria":  {
+                     "has_glyph":  {
+                                       "conditions":  {
+                                                          "items":  [
+                                                                        {
+                                                                            "items":  "beetpunk:leaf_glyph"
+                                                                        }
+                                                                    ]
+                                                      },
+                                       "trigger":  "minecraft:inventory_changed"
+                                   }
+                 },
+    "display":  {
+                    "description":  {
+                                        "translate":  "advancements.beetpunk.find_leaf_glyph.description"
+                                    },
+                    "icon":  {
+                                 "count":  1,
+                                 "id":  "beetpunk:leaf_glyph"
+                             },
+                    "title":  {
+                                  "translate":  "advancements.beetpunk.find_leaf_glyph.title"
+                              }
+                },
+    "requirements":  [
+                         [
+                             "has_glyph"
+                         ]
+                     ]
+}

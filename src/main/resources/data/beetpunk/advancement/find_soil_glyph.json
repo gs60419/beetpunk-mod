@@ -1,0 +1,32 @@
+﻿{
+    "parent":  "beetpunk:seal_seed_temple",
+    "criteria":  {
+                     "has_glyph":  {
+                                       "conditions":  {
+                                                          "items":  [
+                                                                        {
+                                                                            "items":  "beetpunk:soil_glyph"
+                                                                        }
+                                                                    ]
+                                                      },
+                                       "trigger":  "minecraft:inventory_changed"
+                                   }
+                 },
+    "display":  {
+                    "description":  {
+                                        "translate":  "advancements.beetpunk.find_soil_glyph.description"
+                                    },
+                    "icon":  {
+                                 "count":  1,
+                                 "id":  "beetpunk:soil_glyph"
+                             },
+                    "title":  {
+                                  "translate":  "advancements.beetpunk.find_soil_glyph.title"
+                              }
+                },
+    "requirements":  [
+                         [
+                             "has_glyph"
+                         ]
+                     ]
+}

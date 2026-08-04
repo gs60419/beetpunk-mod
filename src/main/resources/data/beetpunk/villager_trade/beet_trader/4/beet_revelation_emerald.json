@@ -1,0 +1,7 @@
+{
+  "gives": { "count": 8.0, "id": "minecraft:emerald" },
+  "max_uses": 4.0,
+  "reputation_discount": 0.05,
+  "wants": { "id": "beetpunk:beet_revelation" },
+  "xp": 20.0
+}

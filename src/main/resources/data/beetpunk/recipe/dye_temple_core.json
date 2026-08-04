@@ -1,0 +1,16 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " B ",
+                    "CSC",
+                    " B "
+                ],
+    "key":  {
+                "B":  "beetpunk:beet_brick_block",
+                "C":  "beetpunk:beet_crystal_grain",
+                "S":  "beetpunk:dye_scripture"
+            },
+    "result":  {
+                   "id":  "beetpunk:dye_temple_core"
+               }
+}

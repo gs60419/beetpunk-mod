@@ -1,0 +1,6 @@
+{
+    "model":  {
+                  "type":  "minecraft:model",
+                  "model":  "beetpunk:item/stripped_beet_stalk_block"
+              }
+}

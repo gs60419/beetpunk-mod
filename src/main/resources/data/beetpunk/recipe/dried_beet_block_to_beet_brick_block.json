@@ -1,0 +1,14 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "DD",
+                    "DD"
+                ],
+    "key":  {
+                "D":  "beetpunk:dried_beet_block"
+            },
+    "result":  {
+                   "id":  "beetpunk:beet_brick_block",
+                   "count":  4
+               }
+}

@@ -1,0 +1,16 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "C C",
+                    "PPP",
+                    "PPP"
+                ],
+    "key":  {
+                "P":  "beetpunk:stripped_beet_stalk_block",
+                "C":  "minecraft:iron_chain"
+            },
+    "result":  {
+                   "id":  "beetpunk:beet_hanging_sign",
+                   "count":  6
+               }
+}

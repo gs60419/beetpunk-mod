@@ -1,0 +1,17 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " C ",
+                    "GIP",
+                    " C "
+                ],
+    "key":  {
+                "C":  "beetpunk:beet_cloth",
+                "G":  "beetpunk:pig_glyph",
+                "I":  "beetpunk:beet_ink",
+                "P":  "beetpunk:dye_scripture"
+            },
+    "result":  {
+                   "id":  "beetpunk:pig_scripture"
+               }
+}

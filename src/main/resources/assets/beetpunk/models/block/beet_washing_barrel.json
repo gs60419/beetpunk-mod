@@ -1,0 +1,10 @@
+{
+  "parent": "beetpunk:block/template_prayer_barrel",
+  "textures": {
+    "side": "beetpunk:block/beet_washing_barrel_side",
+    "top": "beetpunk:block/beet_washing_barrel_top",
+    "bottom": "beetpunk:block/beet_prayer_barrel_bottom",
+    "bottom_dark": "beetpunk:block/beet_prayer_barrel_bottom_dark",
+    "particle": "beetpunk:block/beet_washing_barrel_side"
+  }
+}

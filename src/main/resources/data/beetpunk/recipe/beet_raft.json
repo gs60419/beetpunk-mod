@@ -1,0 +1,13 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "P P",
+                    "PPP"
+                ],
+    "key":  {
+                "P":  "beetpunk:beet_plank_block"
+            },
+    "result":  {
+                   "id":  "beetpunk:beet_raft"
+               }
+}

@@ -1,0 +1,14 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "SPS",
+                    "SPS"
+                ],
+    "key":  {
+                "P":  "beetpunk:beet_plank_block",
+                "S":  "beetpunk:beet_stick"
+            },
+    "result":  {
+                   "id":  "beetpunk:beet_plank_fence_gate"
+               }
+}

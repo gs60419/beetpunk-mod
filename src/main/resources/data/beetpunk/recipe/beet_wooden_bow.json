@@ -1,0 +1,15 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " FS",
+                    "F S",
+                    " FS"
+                ],
+    "key":  {
+                "F":  "beetpunk:beet_fiber",
+                "S":  "beetpunk:beet_stick"
+            },
+    "result":  {
+                   "id":  "beetpunk:beet_wooden_bow"
+               }
+}

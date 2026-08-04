@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_beet_crystal_grain": {
+      "conditions": {
+        "items": [
+          {
+            "items": "beetpunk:beet_crystal_grain"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "beetpunk:amethyst_shard_from_beet_crystal_grain"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_beet_crystal_grain"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "beetpunk:amethyst_shard_from_beet_crystal_grain"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "SPS",
+                    "PBP",
+                    "SPS"
+                ],
+    "key":  {
+                "S":  "beetpunk:beet_stick",
+                "P":  "beetpunk:beet_plank_block",
+                "B":  "beetpunk:beet_block"
+            },
+    "result":  {
+                   "id":  "beetpunk:beet_processing_table"
+               }
+}

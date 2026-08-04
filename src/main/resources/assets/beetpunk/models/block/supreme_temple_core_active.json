@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "beetpunk:block/supreme_temple_core_active"
+  }
+}

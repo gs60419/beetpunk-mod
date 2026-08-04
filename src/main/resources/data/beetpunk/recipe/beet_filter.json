@@ -1,0 +1,15 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "SFS",
+                    "FFF",
+                    "SFS"
+                ],
+    "key":  {
+                "S":  "beetpunk:beet_stick",
+                "F":  "beetpunk:beet_fiber"
+            },
+    "result":  {
+                   "id":  "beetpunk:beet_filter"
+               }
+}

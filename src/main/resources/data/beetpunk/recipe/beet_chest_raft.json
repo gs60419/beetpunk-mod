@@ -1,0 +1,10 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        "beetpunk:beet_raft",
+                        "minecraft:chest"
+                    ],
+    "result":  {
+                   "id":  "beetpunk:beet_chest_raft"
+               }
+}

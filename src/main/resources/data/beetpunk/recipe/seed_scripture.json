@@ -1,0 +1,17 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " C ",
+                    "GIF",
+                    " C "
+                ],
+    "key":  {
+                "C":  "beetpunk:beet_cloth",
+                "G":  "beetpunk:seed_glyph",
+                "I":  "beetpunk:beet_ink",
+                "F":  "beetpunk:beet_filter"
+            },
+    "result":  {
+                   "id":  "beetpunk:seed_scripture"
+               }
+}

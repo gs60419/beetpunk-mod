@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "beetpunk:seed_glyph",
+    "beetpunk:soil_glyph",
+    "beetpunk:sprout_glyph",
+    "beetpunk:water_glyph",
+    "beetpunk:growth_glyph",
+    "beetpunk:light_glyph",
+    "beetpunk:leaf_glyph",
+    "beetpunk:root_glyph",
+    "beetpunk:beet_glyph",
+    "beetpunk:soup_glyph",
+    "beetpunk:dye_glyph",
+    "beetpunk:pig_glyph",
+    "beetpunk:supreme_glyph"
+  ]
+}

@@ -1,0 +1,17 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        "beetpunk:beet_sand",
+                        "beetpunk:beet_residue",
+                        "beetpunk:beet_residue",
+                        "beetpunk:beet_residue",
+                        "beetpunk:beet_residue",
+                        "beetpunk:beet_residue",
+                        "beetpunk:beet_residue",
+                        "beetpunk:beet_residue",
+                        "beetpunk:beet_residue"
+                    ],
+    "result":  {
+                   "id":  "beetpunk:beet_soil"
+               }
+}

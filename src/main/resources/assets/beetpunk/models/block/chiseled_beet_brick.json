@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "beetpunk:block/chiseled_beet_brick_top",
+    "side": "beetpunk:block/chiseled_beet_brick"
+  }
+}

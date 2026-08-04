@@ -1,0 +1,10 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        "beetpunk:stripped_beet_stalk_block"
+                    ],
+    "result":  {
+                   "id":  "beetpunk:beet_plank_block",
+                   "count":  4
+               }
+}

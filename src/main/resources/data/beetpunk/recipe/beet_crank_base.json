@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    "PCP",
+    "PPP"
+  ],
+  "key": {
+    "S": "beetpunk:beet_stick",
+    "P": "beetpunk:beet_plank_block",
+    "C": "beetpunk:beet_crystal_grain"
+  },
+  "result": {
+    "id": "beetpunk:beet_crank_base"
+  }
+}

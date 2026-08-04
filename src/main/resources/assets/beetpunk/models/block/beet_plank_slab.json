@@ -1,0 +1,8 @@
+﻿{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "beetpunk:block/beet_plank_block",
+    "side": "beetpunk:block/beet_plank_block",
+    "top": "beetpunk:block/beet_plank_block"
+  }
+}

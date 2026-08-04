@@ -1,0 +1,9 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        "beetpunk:beet_plank_block"
+                    ],
+    "result":  {
+                   "id":  "beetpunk:beet_plank_button"
+               }
+}

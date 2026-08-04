@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "beetpunk:block/beet_plank_slab"
+    },
+    "type=double": {
+      "model": "beetpunk:block/beet_plank_block"
+    },
+    "type=top": {
+      "model": "beetpunk:block/beet_plank_slab_top"
+    }
+  }
+}

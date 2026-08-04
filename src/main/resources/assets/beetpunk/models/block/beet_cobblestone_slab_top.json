@@ -1,0 +1,8 @@
+﻿{
+    "parent":  "minecraft:block/slab_top",
+    "textures":  {
+                     "bottom":  "beetpunk:block/beet_cobblestone",
+                     "top":  "beetpunk:block/beet_cobblestone",
+                     "side":  "beetpunk:block/beet_cobblestone"
+                 }
+}

@@ -1,0 +1,32 @@
+﻿{
+    "parent":  "beetpunk:seal_sprout_temple",
+    "criteria":  {
+                     "has_glyph":  {
+                                       "conditions":  {
+                                                          "items":  [
+                                                                        {
+                                                                            "items":  "beetpunk:water_glyph"
+                                                                        }
+                                                                    ]
+                                                      },
+                                       "trigger":  "minecraft:inventory_changed"
+                                   }
+                 },
+    "display":  {
+                    "description":  {
+                                        "translate":  "advancements.beetpunk.find_water_glyph.description"
+                                    },
+                    "icon":  {
+                                 "count":  1,
+                                 "id":  "beetpunk:water_glyph"
+                             },
+                    "title":  {
+                                  "translate":  "advancements.beetpunk.find_water_glyph.title"
+                              }
+                },
+    "requirements":  [
+                         [
+                             "has_glyph"
+                         ]
+                     ]
+}

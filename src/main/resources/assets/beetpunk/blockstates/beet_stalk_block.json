@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "beetpunk:block/beet_stalk_block_x"
+    },
+    "axis=y": {
+      "model": "beetpunk:block/beet_stalk_block_y"
+    },
+    "axis=z": {
+      "model": "beetpunk:block/beet_stalk_block_z"
+    }
+  }
+}

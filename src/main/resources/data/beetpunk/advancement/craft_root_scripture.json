@@ -1,0 +1,32 @@
+{
+  "parent": "beetpunk:find_root_glyph",
+  "criteria": {
+    "has_scripture": {
+      "conditions": {
+        "items": [
+          {
+            "items": "beetpunk:root_scripture"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.beetpunk.craft_root_scripture.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "beetpunk:root_scripture"
+    },
+    "title": {
+      "translate": "advancements.beetpunk.craft_root_scripture.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_scripture"
+    ]
+  ]
+}

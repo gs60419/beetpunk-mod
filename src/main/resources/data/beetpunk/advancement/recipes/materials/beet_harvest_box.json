@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_beet_filter": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "beetpunk:beet_filter"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "beetpunk:beet_harvest_box"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_beet_filter",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "beetpunk:beet_harvest_box"
+    ]
+  },
+  "sends_telemetry_event": false
+}

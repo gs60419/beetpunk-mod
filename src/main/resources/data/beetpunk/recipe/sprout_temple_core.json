@@ -1,0 +1,16 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " B ",
+                    "CSC",
+                    " B "
+                ],
+    "key":  {
+                "B":  "beetpunk:beet_brick_block",
+                "C":  "beetpunk:beet_crystal_grain",
+                "S":  "beetpunk:sprout_scripture"
+            },
+    "result":  {
+                   "id":  "beetpunk:sprout_temple_core"
+               }
+}

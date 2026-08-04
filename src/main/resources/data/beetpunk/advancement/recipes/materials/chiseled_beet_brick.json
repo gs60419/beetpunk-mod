@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_dried_beet_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": "beetpunk:dried_beet_slab"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "beetpunk:chiseled_beet_brick"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_dried_beet_slab"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "beetpunk:chiseled_beet_brick"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+﻿{
+  "parent": "minecraft:block/custom_fence_post",
+  "textures": {
+    "particle": "beetpunk:block/beet_plank_fence_particle",
+    "texture": "beetpunk:block/beet_plank_fence"
+  }
+}

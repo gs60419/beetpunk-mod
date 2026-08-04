@@ -1,0 +1,13 @@
+﻿{
+    "variants":  {
+                     "type=bottom":  {
+                                         "model":  "beetpunk:block/beet_cobblestone_slab"
+                                     },
+                     "type=top":  {
+                                      "model":  "beetpunk:block/beet_cobblestone_slab_top"
+                                  },
+                     "type=double":  {
+                                         "model":  "beetpunk:block/beet_cobblestone"
+                                     }
+                 }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/campfire_off",
+  "textures": {
+    "particle": "beetpunk:block/beet_campfire_log",
+    "log": "beetpunk:block/beet_campfire_log"
+  }
+}

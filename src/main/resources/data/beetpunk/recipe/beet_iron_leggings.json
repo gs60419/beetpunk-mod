@@ -1,0 +1,14 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "III",
+                    "I I",
+                    "I I"
+                ],
+    "key":  {
+                "I":  "beetpunk:beet_iron_ingot"
+            },
+    "result":  {
+                   "id":  "beetpunk:beet_iron_leggings"
+               }
+}

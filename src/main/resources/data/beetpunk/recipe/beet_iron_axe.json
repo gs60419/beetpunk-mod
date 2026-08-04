@@ -1,0 +1,15 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "MM",
+                    "MH",
+                    " H"
+                ],
+    "key":  {
+                "M":  "beetpunk:beet_iron_ingot",
+                "H":  "beetpunk:beet_stick"
+            },
+    "result":  {
+                   "id":  "beetpunk:beet_iron_axe"
+               }
+}

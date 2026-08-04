@@ -1,0 +1,6 @@
+﻿{
+    "parent":  "minecraft:block/wall_inventory",
+    "textures":  {
+                     "wall":  "beetpunk:block/beet_cobblestone"
+                 }
+}

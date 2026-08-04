@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "beetpunk:beet_sand",
+    "beetpunk:beet_sand",
+    "beetpunk:beet_sand",
+    "beetpunk:beet_sand",
+    "beetpunk:beet_water_drop",
+    "beetpunk:beet_water_drop",
+    "beetpunk:beet_water_drop",
+    "beetpunk:beet_water_drop",
+    "beetpunk:beet_crystal_grain"
+  ],
+  "result": {
+    "id": "minecraft:pointed_dripstone"
+  }
+}

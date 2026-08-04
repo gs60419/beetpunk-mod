@@ -1,0 +1,46 @@
+{
+  "variants": {
+    "glow=0": {
+      "model": "beetpunk:block/soup_temple_core"
+    },
+    "glow=1": {
+      "model": "beetpunk:block/soup_temple_core_active"
+    },
+    "glow=2": {
+      "model": "beetpunk:block/soup_temple_core_active"
+    },
+    "glow=3": {
+      "model": "beetpunk:block/soup_temple_core_active"
+    },
+    "glow=4": {
+      "model": "beetpunk:block/soup_temple_core_active"
+    },
+    "glow=5": {
+      "model": "beetpunk:block/soup_temple_core_active"
+    },
+    "glow=6": {
+      "model": "beetpunk:block/soup_temple_core_active"
+    },
+    "glow=7": {
+      "model": "beetpunk:block/soup_temple_core_active"
+    },
+    "glow=8": {
+      "model": "beetpunk:block/soup_temple_core_active"
+    },
+    "glow=9": {
+      "model": "beetpunk:block/soup_temple_core_active"
+    },
+    "glow=10": {
+      "model": "beetpunk:block/soup_temple_core_active"
+    },
+    "glow=11": {
+      "model": "beetpunk:block/soup_temple_core_active"
+    },
+    "glow=12": {
+      "model": "beetpunk:block/soup_temple_core_active"
+    },
+    "glow=13": {
+      "model": "beetpunk:block/soup_temple_core_active"
+    }
+  }
+}

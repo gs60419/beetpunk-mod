@@ -1,0 +1,11 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        "beetpunk:beet_leaf",
+                        "beetpunk:beet_leaf"
+                    ],
+    "result":  {
+                   "id":  "beetpunk:beet_fiber",
+                   "count":  2
+               }
+}

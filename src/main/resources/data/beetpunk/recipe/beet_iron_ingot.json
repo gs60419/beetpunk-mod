@@ -1,0 +1,17 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        "beetpunk:beet_iron_dust",
+                        "beetpunk:beet_iron_dust",
+                        "beetpunk:beet_iron_dust",
+                        "beetpunk:beet_iron_dust",
+                        "beetpunk:beet_iron_dust",
+                        "beetpunk:beet_iron_dust",
+                        "beetpunk:beet_iron_dust",
+                        "beetpunk:beet_iron_dust",
+                        "beetpunk:beet_iron_dust"
+                    ],
+    "result":  {
+                   "id":  "beetpunk:beet_iron_ingot"
+               }
+}

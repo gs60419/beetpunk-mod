@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ROR",
+    "OCO",
+    "ROR"
+  ],
+  "key": {
+    "R": "beetpunk:beet_redstone_dust",
+    "O": "beetpunk:beet_oil",
+    "C": "beetpunk:beet_campfire"
+  },
+  "result": {
+    "id": "beetpunk:beet_geothermal_core"
+  }
+}

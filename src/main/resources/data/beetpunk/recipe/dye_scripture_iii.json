@@ -1,0 +1,16 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "IGI",
+                    "GSI",
+                    "III"
+                ],
+    "key":  {
+                "I":  "beetpunk:beet_ink_iii",
+                "G":  "beetpunk:dye_glyph",
+                "S":  "beetpunk:dye_scripture_ii"
+            },
+    "result":  {
+                   "id":  "beetpunk:dye_scripture_iii"
+               }
+}

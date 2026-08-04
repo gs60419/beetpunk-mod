@@ -1,0 +1,25 @@
+{
+  "parent": "beetpunk:root",
+  "criteria": {
+    "hand_harvest": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.beetpunk.first_hand_harvest.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:beetroot"
+    },
+    "title": {
+      "translate": "advancements.beetpunk.first_hand_harvest.title"
+    }
+  },
+  "requirements": [
+    [
+      "hand_harvest"
+    ]
+  ]
+}

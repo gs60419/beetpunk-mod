@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "moisture=0": {
+      "model": "beetpunk:block/fertilized_beet_farmland"
+    },
+    "moisture=1": {
+      "model": "beetpunk:block/fertilized_beet_farmland"
+    },
+    "moisture=2": {
+      "model": "beetpunk:block/fertilized_beet_farmland"
+    },
+    "moisture=3": {
+      "model": "beetpunk:block/fertilized_beet_farmland"
+    },
+    "moisture=4": {
+      "model": "beetpunk:block/fertilized_beet_farmland"
+    },
+    "moisture=5": {
+      "model": "beetpunk:block/fertilized_beet_farmland"
+    },
+    "moisture=6": {
+      "model": "beetpunk:block/fertilized_beet_farmland"
+    },
+    "moisture=7": {
+      "model": "beetpunk:block/fertilized_beet_farmland_moist"
+    }
+  }
+}

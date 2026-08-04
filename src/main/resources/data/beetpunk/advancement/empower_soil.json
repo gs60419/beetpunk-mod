@@ -1,0 +1,25 @@
+{
+  "parent": "beetpunk:craft_soil_scripture",
+  "criteria": {
+    "empowered": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.beetpunk.empower_soil.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "beetpunk:beet_pilgrim_staff"
+    },
+    "title": {
+      "translate": "advancements.beetpunk.empower_soil.title"
+    }
+  },
+  "requirements": [
+    [
+      "empowered"
+    ]
+  ]
+}

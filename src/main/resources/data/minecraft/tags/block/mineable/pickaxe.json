@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "beetpunk:dried_beet_block",
+    "beetpunk:dried_beet_slab",
+    "beetpunk:beet_brick_block",
+    "beetpunk:chiseled_beet_brick",
+    "beetpunk:beet_brick_stairs",
+    "beetpunk:beet_brick_slab",
+    "beetpunk:beet_brick_wall",
+    "beetpunk:beet_cobblestone",
+    "beetpunk:beet_cobblestone_stairs",
+    "beetpunk:beet_cobblestone_slab",
+    "beetpunk:beet_cobblestone_wall",
+    "beetpunk:seed_temple_core",
+    "beetpunk:soil_temple_core",
+    "beetpunk:sprout_temple_core",
+    "beetpunk:water_temple_core",
+    "beetpunk:growth_temple_core",
+    "beetpunk:light_temple_core",
+    "beetpunk:leaf_temple_core",
+    "beetpunk:root_temple_core",
+    "beetpunk:beet_temple_core",
+    "beetpunk:soup_temple_core",
+    "beetpunk:dye_temple_core",
+    "beetpunk:pig_temple_core",
+    "beetpunk:supreme_temple_core",
+    "beetpunk:beet_geothermal_core"
+  ]
+}

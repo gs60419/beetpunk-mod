@@ -1,0 +1,16 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "IGI",
+                    "ISI",
+                    "IGI"
+                ],
+    "key":  {
+                "I":  "beetpunk:beet_ink_ii",
+                "G":  "beetpunk:supreme_glyph",
+                "S":  "beetpunk:supreme_scripture"
+            },
+    "result":  {
+                   "id":  "beetpunk:supreme_scripture_ii"
+               }
+}

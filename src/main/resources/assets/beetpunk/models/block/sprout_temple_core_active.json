@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "beetpunk:block/sprout_temple_core_active"
+  }
+}

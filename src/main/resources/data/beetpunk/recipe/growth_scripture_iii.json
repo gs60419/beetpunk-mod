@@ -1,0 +1,16 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "IGI",
+                    "GSI",
+                    "III"
+                ],
+    "key":  {
+                "I":  "beetpunk:beet_ink_iii",
+                "G":  "beetpunk:growth_glyph",
+                "S":  "beetpunk:growth_scripture_ii"
+            },
+    "result":  {
+                   "id":  "beetpunk:growth_scripture_iii"
+               }
+}

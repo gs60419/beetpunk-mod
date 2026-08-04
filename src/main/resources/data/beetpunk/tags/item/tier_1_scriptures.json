@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "beetpunk:seed_scripture",
+    "beetpunk:soil_scripture",
+    "beetpunk:sprout_scripture",
+    "beetpunk:water_scripture",
+    "beetpunk:growth_scripture",
+    "beetpunk:light_scripture",
+    "beetpunk:leaf_scripture",
+    "beetpunk:root_scripture",
+    "beetpunk:beet_scripture",
+    "beetpunk:soup_scripture",
+    "beetpunk:dye_scripture",
+    "beetpunk:pig_scripture",
+    "beetpunk:supreme_scripture"
+  ]
+}

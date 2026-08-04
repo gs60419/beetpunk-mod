@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "beetpunk:dried_beet_slab",
+    "beetpunk:beet_brick_slab",
+    "beetpunk:beet_cobblestone_slab"
+  ]
+}

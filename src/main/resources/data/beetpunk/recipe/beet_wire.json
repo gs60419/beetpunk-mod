@@ -1,0 +1,16 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    " F ",
+                    " R ",
+                    " F "
+                ],
+    "key":  {
+                "F":  "beetpunk:beet_fiber",
+                "R":  "beetpunk:beet_redstone_dust"
+            },
+    "result":  {
+                   "id":  "beetpunk:beet_wire",
+                   "count":  2
+               }
+}

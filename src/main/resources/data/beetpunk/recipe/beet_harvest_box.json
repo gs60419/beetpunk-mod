@@ -1,0 +1,15 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "PPP",
+                    "PFP",
+                    "PPP"
+                ],
+    "key":  {
+                "P":  "beetpunk:beet_plank_block",
+                "F":  "beetpunk:beet_filter"
+            },
+    "result":  {
+                   "id":  "beetpunk:beet_harvest_box"
+               }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "beetpunk:block/beet_plank_pressure_plate"
+    },
+    "powered=true": {
+      "model": "beetpunk:block/beet_plank_pressure_plate_down"
+    }
+  }
+}

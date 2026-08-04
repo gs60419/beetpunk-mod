@@ -1,0 +1,16 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "PPP",
+                    "PPP",
+                    " S "
+                ],
+    "key":  {
+                "P":  "beetpunk:beet_plank_block",
+                "S":  "beetpunk:beet_stick"
+            },
+    "result":  {
+                   "id":  "beetpunk:beet_sign",
+                   "count":  3
+               }
+}

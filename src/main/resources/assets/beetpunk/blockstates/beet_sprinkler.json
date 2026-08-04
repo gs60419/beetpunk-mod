@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "beetpunk:block/beet_sprinkler"
+    },
+    "facing=east": {
+      "model": "beetpunk:block/beet_sprinkler",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "beetpunk:block/beet_sprinkler",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "beetpunk:block/beet_sprinkler",
+      "y": 270
+    }
+  }
+}

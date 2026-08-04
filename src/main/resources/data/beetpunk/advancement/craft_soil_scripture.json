@@ -1,0 +1,32 @@
+{
+  "parent": "beetpunk:find_soil_glyph",
+  "criteria": {
+    "has_scripture": {
+      "conditions": {
+        "items": [
+          {
+            "items": "beetpunk:soil_scripture"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.beetpunk.craft_soil_scripture.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "beetpunk:soil_scripture"
+    },
+    "title": {
+      "translate": "advancements.beetpunk.craft_soil_scripture.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_scripture"
+    ]
+  ]
+}

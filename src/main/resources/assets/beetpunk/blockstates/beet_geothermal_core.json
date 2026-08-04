@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "beetpunk:block/beet_geothermal_core"
+    }
+  }
+}

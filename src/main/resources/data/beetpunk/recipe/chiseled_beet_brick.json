@@ -1,0 +1,13 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "S",
+                    "S"
+                ],
+    "key":  {
+                "S":  "beetpunk:dried_beet_slab"
+            },
+    "result":  {
+                   "id":  "beetpunk:chiseled_beet_brick"
+               }
+}

@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "beetpunk:beet_stalk_block",
+    "beetpunk:stripped_beet_stalk_block",
+    "beetpunk:beet_plank_stairs",
+    "beetpunk:beet_plank_slab",
+    "beetpunk:beet_plank_fence",
+    "beetpunk:beet_plank_fence_gate",
+    "beetpunk:beet_plank_door",
+    "beetpunk:beet_plank_trapdoor",
+    "beetpunk:beet_plank_pressure_plate",
+    "beetpunk:beet_plank_button",
+    "beetpunk:beet_plank_block",
+    "beetpunk:beet_processing_table",
+    "beetpunk:beet_grinder_table",
+    "beetpunk:beet_washing_table",
+    "beetpunk:beet_crank_base",
+    "beetpunk:beet_extractor_barrel",
+    "beetpunk:beet_grinder_barrel",
+    "beetpunk:beet_washing_barrel",
+    "beetpunk:beet_sprinkler",
+    "beetpunk:beet_campfire"
+  ]
+}

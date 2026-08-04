@@ -1,0 +1,6 @@
+﻿{
+  "parent": "minecraft:block/pressure_plate_up",
+  "textures": {
+    "texture": "beetpunk:block/beet_plank_block"
+  }
+}

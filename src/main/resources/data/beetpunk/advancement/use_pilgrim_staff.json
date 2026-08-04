@@ -1,0 +1,25 @@
+{
+  "parent": "beetpunk:craft_seed_scripture",
+  "criteria": {
+    "used": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.beetpunk.use_pilgrim_staff.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "beetpunk:beet_pilgrim_staff"
+    },
+    "title": {
+      "translate": "advancements.beetpunk.use_pilgrim_staff.title"
+    }
+  },
+  "requirements": [
+    [
+      "used"
+    ]
+  ]
+}

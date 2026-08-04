@@ -1,0 +1,15 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "P  ",
+                    "PP ",
+                    "PPP"
+                ],
+    "key":  {
+                "P":  "beetpunk:beet_plank_block"
+            },
+    "result":  {
+                   "id":  "beetpunk:beet_plank_stairs",
+                   "count":  4
+               }
+}

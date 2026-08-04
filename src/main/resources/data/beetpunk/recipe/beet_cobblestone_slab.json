@@ -1,0 +1,13 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "BBB"
+                ],
+    "key":  {
+                "B":  "beetpunk:beet_cobblestone"
+            },
+    "result":  {
+                   "id":  "beetpunk:beet_cobblestone_slab",
+                   "count":  6
+               }
+}

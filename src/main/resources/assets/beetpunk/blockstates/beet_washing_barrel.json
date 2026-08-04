@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "facing=north,spinning=false": {
+      "model": "beetpunk:block/beet_washing_barrel"
+    },
+    "spinning=false,facing=north": {
+      "model": "beetpunk:block/beet_washing_barrel"
+    },
+    "facing=north,spinning=true": {
+      "model": "beetpunk:block/beet_prayer_barrel_spin_anchor"
+    },
+    "spinning=true,facing=north": {
+      "model": "beetpunk:block/beet_prayer_barrel_spin_anchor"
+    },
+    "facing=east,spinning=false": {
+      "model": "beetpunk:block/beet_washing_barrel",
+      "y": 90
+    },
+    "spinning=false,facing=east": {
+      "model": "beetpunk:block/beet_washing_barrel",
+      "y": 90
+    },
+    "facing=east,spinning=true": {
+      "model": "beetpunk:block/beet_prayer_barrel_spin_anchor",
+      "y": 90
+    },
+    "spinning=true,facing=east": {
+      "model": "beetpunk:block/beet_prayer_barrel_spin_anchor",
+      "y": 90
+    },
+    "facing=south,spinning=false": {
+      "model": "beetpunk:block/beet_washing_barrel",
+      "y": 180
+    },
+    "spinning=false,facing=south": {
+      "model": "beetpunk:block/beet_washing_barrel",
+      "y": 180
+    },
+    "facing=south,spinning=true": {
+      "model": "beetpunk:block/beet_prayer_barrel_spin_anchor",
+      "y": 180
+    },
+    "spinning=true,facing=south": {
+      "model": "beetpunk:block/beet_prayer_barrel_spin_anchor",
+      "y": 180
+    },
+    "facing=west,spinning=false": {
+      "model": "beetpunk:block/beet_washing_barrel",
+      "y": 270
+    },
+    "spinning=false,facing=west": {
+      "model": "beetpunk:block/beet_washing_barrel",
+      "y": 270
+    },
+    "facing=west,spinning=true": {
+      "model": "beetpunk:block/beet_prayer_barrel_spin_anchor",
+      "y": 270
+    },
+    "spinning=true,facing=west": {
+      "model": "beetpunk:block/beet_prayer_barrel_spin_anchor",
+      "y": 270
+    }
+  }
+}

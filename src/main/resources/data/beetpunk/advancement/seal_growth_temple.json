@@ -1,0 +1,25 @@
+{
+  "parent": "beetpunk:craft_growth_scripture",
+  "criteria": {
+    "sealed": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.beetpunk.seal_growth_temple.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "beetpunk:growth_temple_core"
+    },
+    "title": {
+      "translate": "advancements.beetpunk.seal_growth_temple.title"
+    }
+  },
+  "requirements": [
+    [
+      "sealed"
+    ]
+  ]
+}

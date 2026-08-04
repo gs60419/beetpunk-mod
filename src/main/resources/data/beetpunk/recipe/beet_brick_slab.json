@@ -1,0 +1,13 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "BBB"
+                ],
+    "key":  {
+                "B":  "beetpunk:beet_brick_block"
+            },
+    "result":  {
+                   "id":  "beetpunk:beet_brick_slab",
+                   "count":  6
+               }
+}

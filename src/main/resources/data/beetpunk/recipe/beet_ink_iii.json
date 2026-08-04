@@ -1,0 +1,14 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        "beetpunk:beet_ink_ii",
+                        "beetpunk:beet_oil",
+                        "minecraft:red_dye",
+                        "minecraft:red_dye",
+                        "minecraft:red_dye",
+                        "minecraft:red_dye"
+                    ],
+    "result":  {
+                   "id":  "beetpunk:beet_ink_iii"
+               }
+}

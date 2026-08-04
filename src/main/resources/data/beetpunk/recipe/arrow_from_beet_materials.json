@@ -1,0 +1,17 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "C",
+                    "S",
+                    "F"
+                ],
+    "key":  {
+                "C":  "beetpunk:beet_crystal_grain",
+                "S":  "beetpunk:beet_stick",
+                "F":  "beetpunk:beet_cloth"
+            },
+    "result":  {
+                   "id":  "minecraft:arrow",
+                   "count":  4
+               }
+}

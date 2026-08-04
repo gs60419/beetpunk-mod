@@ -1,0 +1,33 @@
+﻿{
+    "parent":  "minecraft:recipes/root",
+    "criteria":  {
+                     "has_input":  {
+                                       "trigger":  "minecraft:inventory_changed",
+                                       "conditions":  {
+                                                          "items":  [
+                                                                        {
+                                                                            "items":  "beetpunk:sprout_scripture"
+                                                                        }
+                                                                    ]
+                                                      }
+                                   },
+                     "has_the_recipe":  {
+                                            "trigger":  "minecraft:recipe_unlocked",
+                                            "conditions":  {
+                                                               "recipe":  "beetpunk:sprout_scripture_ii"
+                                                           }
+                                        }
+                 },
+    "requirements":  [
+                         [
+                             "has_input",
+                             "has_the_recipe"
+                         ]
+                     ],
+    "rewards":  {
+                    "recipes":  [
+                                    "beetpunk:sprout_scripture_ii"
+                                ]
+                },
+    "sends_telemetry_event":  false
+}

@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_beet_wooden_water_bucket": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "beetpunk:beet_water_drop"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "beetpunk:beet_wooden_water_bucket"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_beet_wooden_water_bucket",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "beetpunk:beet_wooden_water_bucket"
+    ]
+  },
+  "sends_telemetry_event": false
+}

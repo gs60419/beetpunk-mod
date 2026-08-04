@@ -1,0 +1,12 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        "beetpunk:beet_redstone_dust",
+                        "beetpunk:beet_redstone_dust",
+                        "beetpunk:beet_redstone_dust",
+                        "beetpunk:beet_redstone_dust"
+                    ],
+    "result":  {
+                   "id":  "minecraft:redstone"
+               }
+}

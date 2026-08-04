@@ -1,0 +1,13 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "BB",
+                    "BB"
+                ],
+    "key":  {
+                "B":  "minecraft:beetroot"
+            },
+    "result":  {
+                   "id":  "beetpunk:beet_ration"
+               }
+}

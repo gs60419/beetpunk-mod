@@ -1,0 +1,17 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        "beetpunk:beet_wooden_bucket",
+                        "beetpunk:beet_water_drop",
+                        "beetpunk:beet_water_drop",
+                        "beetpunk:beet_water_drop",
+                        "beetpunk:beet_water_drop",
+                        "beetpunk:beet_water_drop",
+                        "beetpunk:beet_water_drop",
+                        "beetpunk:beet_water_drop",
+                        "beetpunk:beet_water_drop"
+                    ],
+    "result":  {
+                   "id":  "beetpunk:beet_wooden_water_bucket"
+               }
+}

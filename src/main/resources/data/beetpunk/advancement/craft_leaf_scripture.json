@@ -1,0 +1,32 @@
+{
+  "parent": "beetpunk:find_leaf_glyph",
+  "criteria": {
+    "has_scripture": {
+      "conditions": {
+        "items": [
+          {
+            "items": "beetpunk:leaf_scripture"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.beetpunk.craft_leaf_scripture.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "beetpunk:leaf_scripture"
+    },
+    "title": {
+      "translate": "advancements.beetpunk.craft_leaf_scripture.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_scripture"
+    ]
+  ]
+}

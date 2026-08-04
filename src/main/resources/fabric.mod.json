@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "beetpunk",
+	"version": "${version}",
+	"name": "Beetpunk",
+	"description": "A Fabric prototype that turns Minecraft beetroot into roots, leaves, fibers, blocks, residue, and oil.",
+	"authors": [
+		"gs60419"
+	],
+	"contact": {
+		"homepage": "https://gs60419.github.io/concepts/beetpunk/",
+		"sources": "https://github.com/gs60419/gs60419.github.io"
+	},
+	"license": "CC0-1.0",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.gs60419.beetpunk.Beetpunk"
+		],
+		"client": [
+			"net.gs60419.beetpunk.BeetpunkClient"
+		]
+	},
+	"accessWidener": "beetpunk.accesswidener",
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

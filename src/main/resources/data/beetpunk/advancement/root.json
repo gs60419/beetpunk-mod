@@ -1,0 +1,27 @@
+{
+  "criteria": {
+    "entered_world": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/husbandry.png",
+    "description": {
+      "translate": "advancements.beetpunk.root.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:beetroot"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.beetpunk.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "entered_world"
+    ]
+  ]
+}

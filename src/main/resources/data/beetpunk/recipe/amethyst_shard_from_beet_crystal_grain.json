@@ -1,0 +1,12 @@
+﻿{
+    "type":  "minecraft:crafting_shapeless",
+    "ingredients":  [
+                        "beetpunk:beet_crystal_grain",
+                        "beetpunk:beet_crystal_grain",
+                        "beetpunk:beet_crystal_grain",
+                        "beetpunk:beet_crystal_grain"
+                    ],
+    "result":  {
+                   "id":  "minecraft:amethyst_shard"
+               }
+}

@@ -1,0 +1,16 @@
+﻿{
+    "type":  "minecraft:crafting_shaped",
+    "pattern":  [
+                    "PFP",
+                    "FWF",
+                    "PFP"
+                ],
+    "key":  {
+                "P":  "beetpunk:beet_plank_block",
+                "F":  "beetpunk:beet_filter",
+                "W":  "beetpunk:beet_water"
+            },
+    "result":  {
+                   "id":  "beetpunk:beet_sprinkler"
+               }
+}

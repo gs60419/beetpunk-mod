@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_farmland",
+  "textures": {
+    "dirt": "beetpunk:block/beet_soil",
+    "top": "beetpunk:block/beet_farmland_moist"
+  }
+}
