@@ -6,28 +6,28 @@
 
 ## 目前工作區
 
-- 主要 repo：`D:\ai_brain\20_projects\beetpunk-mod-26.2`
-- 目前測試用 Prism 實例：`C:\Users\gs604\AppData\Roaming\PrismLauncher\instances\甜菜26.2`
+- 主要 repo：`<project-path>`
+- 目前測試用 Prism 實例：`<prism-instance>`
 - 每次成功 build 後，要覆蓋的 jar：
-  `C:\Users\gs604\AppData\Roaming\PrismLauncher\instances\甜菜26.2\.minecraft\mods\beetpunk-0.1.0.jar`
+  `<prism-instance>\.minecraft\mods\beetpunk-0.1.0.jar`
 - Minecraft 目標版本：`26.2`
 - Fabric Loader：`0.19.3`
 - Fabric API：`0.154.0+26.2`
-- build 使用 Java：`C:\Program Files\Microsoft\jdk-25.0.3.9-hotspot`
+- build 使用 Java：`Java 25`
 
 Build 與覆蓋 jar 指令：
 
 ```powershell
-$env:JAVA_HOME='C:\Program Files\Microsoft\jdk-25.0.3.9-hotspot'
+$env:JAVA_HOME='<java-25-path>'
 $env:Path="$env:JAVA_HOME\bin;$env:Path"
 .\gradlew.bat build --no-daemon
-Copy-Item -LiteralPath 'D:\ai_brain\20_projects\beetpunk-mod-26.2\build\libs\beetpunk-0.1.0.jar' -Destination 'C:\Users\gs604\AppData\Roaming\PrismLauncher\instances\甜菜26.2\.minecraft\mods\beetpunk-0.1.0.jar' -Force
+Copy-Item -LiteralPath '<project-path>\build\libs\beetpunk-0.1.0.jar' -Destination '<prism-instance>\.minecraft\mods\beetpunk-0.1.0.jar' -Force
 ```
 
-如果 `python` 會打開 Microsoft Store alias，可以改用這個 bundled Python：
+如果 `python` 會打開 Microsoft Store alias，可以改用專案環境中可用的 Python：
 
 ```text
-C:\Users\gs604\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe
+<python-path>
 ```
 
 ## 目前設計方向
@@ -112,14 +112,15 @@ C:\Users\gs604\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\p
 
 ## 目前燃料清單
 
-目前只有這些物品可以放進轉經底座燃料槽：
+目前這些物品可以放進轉經底座燃料槽：
 
 - `BEET_STICK`：`100` ticks
 - `BEET_PLANK_BLOCK`：`300` ticks
 - `DRIED_BEET_BLOCK`：`800` ticks
 - `BEET_OIL`：`1600` ticks
-
-原版煤炭、木炭、一般木材目前不能當轉經底座燃料。
+- 原版木材 / 木板：`300` ticks
+- 原版木炭：`800` ticks
+- 原版煤炭：`1600` ticks
 
 相關檔案：
 
@@ -197,7 +198,6 @@ C:\Users\gs604\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\p
 
 ## 已知清理與後續想法
 
-- `README.md` 目前偏舊，仍有舊版 1.21.1 / Java 21 的描述，之後有空要更新。
 - 可以把轉經底座與多桶堆疊行為寫進巡禮帳或 tooltip。
 - 可以在底座 UI 顯示目前桶身堆疊等級 / 速度。
 - 未來再決定多桶堆疊是只加速，還是改成增加單次處理量，或綁定高階神殿解鎖。

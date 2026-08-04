@@ -1,18 +1,25 @@
 """
 Extract vanilla textures from Minecraft jar, apply beet-red tint, save as mod textures.
 
+Usage:
+    python tint_textures.py <minecraft-jar-path> <assets-output-path>
+
 Cloth block: beetpunk:block/beet_cloth_block.png  (from magenta_wool)
 Bed entity:  beetpunk:entity/bed/beet.png          (from magenta entity bed)
 
 Tint: #8B1538 — deep beetroot red (multiply blend).
 """
 
+import sys
 import zipfile
 from pathlib import Path
 from PIL import Image
 
-JAR = Path(r"C:\Users\gs604\AppData\Roaming\.minecraft\versions\1.21.1\1.21.1.jar")
-RES = Path(r"D:\ai_brain\20_projects\beetpunk-mod\src\main\resources\assets")
+if len(sys.argv) != 3:
+    raise SystemExit("Usage: python tint_textures.py <minecraft-jar-path> <assets-output-path>")
+
+JAR = Path(sys.argv[1])
+RES = Path(sys.argv[2])
 
 TINT_R, TINT_G, TINT_B = 0x8B, 0x15, 0x38  # #8B1538
 

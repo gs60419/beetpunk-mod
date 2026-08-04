@@ -6,6 +6,17 @@ out/
 classes/
 compile-stubs/
 
+# local secrets and credentials
+
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.jks
+credentials.*
+secrets.*
+
 # eclipse
 
 *.launch
