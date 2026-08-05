@@ -145,8 +145,7 @@ function renderMachine(key){const [title,...rows]=machineContent[key];$("#machin
 
 function renderTemples(){
   const grid=$("#temple-grid");
-  grid.innerHTML=temples.map(([id,name,theme,summary,detail],index)=>`<article class="temple-card" data-number="${String(index+1).padStart(2,"0")}" tabindex="0"><img src="assets/icons/${id}_temple_core.png" alt=""><h3>${name}</h3><div class="theme">${theme} · ${summary}</div><p class="summary">${detail.split("；")[0]}。</p><p class="detail">${detail}</p><div class="temple-levels" aria-label="四個神殿等級"><i></i><i></i><i></i><i></i></div></article>`).join("");
-  $$(".temple-card").forEach(card=>{const toggle=()=>card.classList.toggle("expanded");card.addEventListener("click",toggle);card.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();toggle()}})});
+  grid.innerHTML=temples.map(([id,name,theme,summary,detail],index)=>`<a class="temple-card" data-number="${String(index+1).padStart(2,"0")}" href="temples.html#temple-${id}"><img src="assets/icons/${id}_temple_core.png" alt=""><h3>${name}</h3><div class="theme">${theme} · ${summary}</div><p class="summary">${detail.split("；")[0]}。</p><span class="temple-enter">進殿參拜 →</span><div class="temple-levels" aria-label="四個神殿等級"><i></i><i></i><i></i><i></i></div></a>`).join("");
 }
 function bindNavigation(){
   $(".nav-toggle").addEventListener("click",(event)=>{const nav=$("#site-nav");nav.classList.toggle("open");event.currentTarget.setAttribute("aria-expanded",nav.classList.contains("open"))});
