@@ -7,7 +7,7 @@ const branches=[
     {id:"wood",name:"枝條與木工",hint:"枝條 · 木材 · 家具 · 建築"},
     {id:"equipment",name:"工具與巡禮裝備",hint:"手杖 · 工具 · 武器 · 裝備"}
   ]},
-  {id:"farm",number:"02",name:"農務循環",theme:"讓種子、水土與收成逐步變成範圍法則。",icon:"minecraft:beetroot_seeds",groups:[
+  {id:"farm",number:"02",name:"農務循環",theme:"讓種子、水土與收成逐步變成範圍法則。",icon:"beetpunk:seed_glyph",groups:[
     {id:"farming",name:"水土與農業",hint:"土壤 · 水 · 肥料 · 採收"},
     {id:"food",name:"食物與生活",hint:"甜菜 · 乾糧 · 食物用途"},
     {id:"temples",name:"十三神殿",hint:"聖文字 · 經書 · 核心 · 天啟"}
