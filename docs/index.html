@@ -18,7 +18,7 @@
     <nav id="site-nav" aria-label="主要導覽">
       <a href="#route">生存路線</a>
       <a href="#machines">轉經機械</a>
-      <a href="#tree">合成樹</a>
+      <a href="tree.html">合成樹</a>
       <a href="temples.html">十三神殿</a>
       <a class="nav-github" href="https://github.com/gs60419/beetpunk-mod">GitHub ↗</a>
     </nav>
@@ -31,7 +31,7 @@
         <h1>從一株甜菜，<br><em>重建整個世界。</em></h1>
         <p class="hero-lead">甜菜不再只是湯裡的配角。收葉、抽纖、壓榨、研磨、篩洗——從紅色根莖長出木材、石頭、鐵、水與十三座神殿。</p>
         <div class="hero-actions">
-          <a class="button primary" href="#tree">展開合成樹</a>
+          <a class="button primary" href="tree.html">展開合成樹</a>
           <a class="button ghost" href="https://github.com/gs60419/beetpunk-mod">查看原始碼</a>
         </div>
         <dl class="hero-stats">
@@ -89,30 +89,17 @@
 
     <section id="tree" class="section tree-section">
       <div class="section-heading tree-heading">
-        <div><p class="section-kicker">互動合成樹</p><h2>甜菜會通往哪裡？</h2></div>
-        <p>搜尋物品或選擇路線；點擊節點可查看取得配方與後續用途。</p>
+        <div><p class="section-kicker">甜菜文明樹</p><h2>一株甜菜，向下長成三條文明根系。</h2></div>
+        <p>獨立合成樹預設只顯示主幹；沿著枝節逐一展開，或切換為完整百科快速查詢。</p>
       </div>
-      <div class="tree-toolbar">
-        <label class="search-box"><span>搜尋</span><input id="recipe-search" type="search" placeholder="例如：甜菜鐵錠、經書、噴灑器…" autocomplete="off"></label>
-        <div class="filter-group" aria-label="路線篩選">
-          <button class="filter active" data-filter="all">全部</button>
-          <button class="filter" data-filter="material">材料</button>
-          <button class="filter" data-filter="machine">機械</button>
-          <button class="filter" data-filter="temple">神殿</button>
-          <button class="filter" data-filter="equipment">裝備</button>
-        </div>
+      <div class="tree-preview" aria-label="甜菜文明樹三條主幹">
+        <div class="preview-root"><span>原版甜菜</span></div>
+        <div class="preview-trunk"></div>
+        <article><span>01</span><h3>葉脈工藝</h3><p>纖維、布料、木材與巡禮裝備</p></article>
+        <article><span>02</span><h3>農務循環</h3><p>種子、水土、食物與十三神殿</p></article>
+        <article><span>03</span><h3>根系工業</h3><p>榨取、石材、礦物與轉經機械</p></article>
       </div>
-      <div class="tree-layout">
-        <div class="graph-shell">
-          <div class="graph-help">拖曳空白處移動 · 滾輪縮放 · 點擊節點查看</div>
-          <div id="recipe-graph" class="recipe-graph" tabindex="0" aria-label="甜菜龐克合成樹"></div>
-          <div class="graph-controls"><button id="zoom-out" aria-label="縮小">−</button><button id="reset-view">重置</button><button id="zoom-in" aria-label="放大">＋</button></div>
-        </div>
-        <aside id="recipe-panel" class="recipe-panel" aria-live="polite">
-          <div class="panel-empty"><span>↖</span><h3>選擇一個物品</h3><p>查看它如何製作，又能通往哪些物品。</p></div>
-        </aside>
-      </div>
-      <p class="data-note">配方資料直接由模組的 149 份 JSON 與轉經桶程式規則產生。</p>
+      <div class="tree-preview-action"><a class="button primary" href="tree.html">進入完整合成樹 →</a><small>149 份工作台配方＋8 條轉經加工規則</small></div>
     </section>
 
     <section id="temples" class="section temple-section">

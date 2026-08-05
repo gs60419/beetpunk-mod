@@ -65,18 +65,20 @@ function iconMarkup(id, alt = "") {
 }
 
 async function init() {
-  try {
-    data = await fetch("data/recipes.json").then((response) => { if (!response.ok) throw new Error(response.status); return response.json(); });
-    allRecipes = [...data.recipes, ...data.processing];
-    for (const recipe of allRecipes) {
-      nameMap.set(recipe.result.id, recipe.result.name);
-      recipe.ingredients.forEach((item) => nameMap.set(item.id, item.name));
-      recipe.results?.forEach((item) => nameMap.set(item.id, item.name));
+  if ($("#recipe-graph")) {
+    try {
+      data = await fetch("data/recipes.json").then((response) => { if (!response.ok) throw new Error(response.status); return response.json(); });
+      allRecipes = [...data.recipes, ...data.processing];
+      for (const recipe of allRecipes) {
+        nameMap.set(recipe.result.id, recipe.result.name);
+        recipe.ingredients.forEach((item) => nameMap.set(item.id, item.name));
+        recipe.results?.forEach((item) => nameMap.set(item.id, item.name));
+      }
+      renderGraph();
+      bindTreeControls();
+    } catch (error) {
+      $("#recipe-graph").innerHTML = `<p class="data-error">配方資料讀取失敗。請透過網站伺服器開啟本頁。</p>`;
     }
-    renderGraph();
-    bindTreeControls();
-  } catch (error) {
-    $("#recipe-graph").innerHTML = `<p class="data-error">配方資料讀取失敗。請透過網站伺服器開啟本頁。</p>`;
   }
   renderTemples();
   renderMachine("extract");
