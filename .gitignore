@@ -17,6 +17,11 @@ compile-stubs/
 credentials.*
 secrets.*
 
+# generated website data
+
+docs/data/recipes.json
+docs/assets/icons/
+
 # eclipse
 
 *.launch

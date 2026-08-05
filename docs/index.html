@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6e1534">
+  <meta name="description" content="甜菜龐克 Minecraft Fabric 模組百科、材料路線與互動合成樹。">
+  <title>甜菜龐克｜從一株甜菜重建世界</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="甜菜龐克首頁">
+      <span class="brand-mark">B</span>
+      <span><strong>甜菜龐克</strong><small>BEETPUNK</small></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">選單</button>
+    <nav id="site-nav" aria-label="主要導覽">
+      <a href="#route">生存路線</a>
+      <a href="#machines">轉經機械</a>
+      <a href="#tree">合成樹</a>
+      <a href="#temples">十三神殿</a>
+      <a class="nav-github" href="https://github.com/gs60419/beetpunk-mod">GitHub ↗</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Minecraft Java 26.2 · Fabric</p>
+        <h1>從一株甜菜，<br><em>重建整個世界。</em></h1>
+        <p class="hero-lead">甜菜不再只是湯裡的配角。收葉、抽纖、壓榨、研磨、篩洗——從紅色根莖長出木材、石頭、鐵、水與十三座神殿。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#tree">展開合成樹</a>
+          <a class="button ghost" href="https://github.com/gs60419/beetpunk-mod">查看原始碼</a>
+        </div>
+        <dl class="hero-stats">
+          <div><dt>149</dt><dd>工作台配方</dd></div>
+          <div><dt>8</dt><dd>桶身加工</dd></div>
+          <div><dt>13×4</dt><dd>神殿經書</dd></div>
+        </dl>
+      </div>
+      <div class="hero-art" aria-label="甜菜材料循環插畫">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="beet-core"><span>甜菜</span></div>
+        <div class="material-chip chip-leaf">葉<br><small>纖維</small></div>
+        <div class="material-chip chip-wood">枝<br><small>木材</small></div>
+        <div class="material-chip chip-stone">根<br><small>石材</small></div>
+        <div class="material-chip chip-oil">油<br><small>動力</small></div>
+      </div>
+    </section>
+
+    <section class="manifesto band">
+      <p class="section-kicker">模組核心</p>
+      <h2>不是增加一種材料，<br>而是建立一條<span>甜菜文明</span>。</h2>
+      <p>為極限空島與低資源生存設計。玩家從原版甜菜出發，讓每次收成同時打開新的材料分支；最終透過經書與神殿，把手工勞動逐步轉化為範圍能力與自動化。</p>
+    </section>
+
+    <section id="route" class="section route-section">
+      <div class="section-heading">
+        <div><p class="section-kicker">生存路線</p><h2>一條會分岔的紅色科技史</h2></div>
+        <p>先建立基本生存，再透過三種轉經桶突破材料限制。</p>
+      </div>
+      <div class="route-grid">
+        <article class="route-card"><span class="route-no">01</span><div class="route-icon">🌱</div><h3>收成</h3><p>成熟甜菜帶來根、葉與種子，所有路線從這裡分化。</p><ul><li>甜菜葉</li><li>甜菜根</li><li>甜菜種子</li></ul></article>
+        <article class="route-card"><span class="route-no">02</span><div class="route-icon">🧵</div><h3>纖維與木材</h3><p>葉片抽成纖維，枝條壓成木質方塊，補齊早期生活。</p><ul><li>布與濾網</li><li>工具與建材</li><li>巡禮裝備</li></ul></article>
+        <article class="route-card"><span class="route-no">03</span><div class="route-icon">⚙</div><h3>壓榨與研磨</h3><p>甜菜塊進入轉經機械，產出石材、水滴、油與晶粒。</p><ul><li>三種桶身</li><li>最高四層加速</li><li>手轉或燃料</li></ul></article>
+        <article class="route-card"><span class="route-no">04</span><div class="route-icon">✦</div><h3>神殿文明</h3><p>蒐集聖文字、裝訂四階經書，讓生產跨入範圍化。</p><ul><li>十三神殿</li><li>16–64 格範圍</li><li>高階自動化</li></ul></article>
+      </div>
+    </section>
+
+    <section id="machines" class="section machine-section">
+      <div class="machine-copy">
+        <p class="section-kicker">轉經機械</p>
+        <h2>一座底座，<br>三種功能桶身。</h2>
+        <p>對桶身右鍵手轉，或在底座加入燃料持續運轉。同類桶身能向上堆疊，最高以四倍速度處理材料。</p>
+        <div class="machine-tabs" role="tablist" aria-label="桶身種類">
+          <button class="machine-tab active" data-machine="extract" role="tab">榨取桶</button>
+          <button class="machine-tab" data-machine="grind" role="tab">研磨桶</button>
+          <button class="machine-tab" data-machine="wash" role="tab">篩洗桶</button>
+        </div>
+        <div id="machine-recipe" class="machine-recipe"></div>
+      </div>
+      <figure class="machine-visual">
+        <img src="assets/prayer-barrels.png" alt="甜菜榨取、研磨與篩洗轉經桶概念圖">
+        <figcaption>同類桶身垂直堆疊，可提升處理速度。</figcaption>
+      </figure>
+    </section>
+
+    <section id="tree" class="section tree-section">
+      <div class="section-heading tree-heading">
+        <div><p class="section-kicker">互動合成樹</p><h2>甜菜會通往哪裡？</h2></div>
+        <p>搜尋物品或選擇路線；點擊節點可查看取得配方與後續用途。</p>
+      </div>
+      <div class="tree-toolbar">
+        <label class="search-box"><span>搜尋</span><input id="recipe-search" type="search" placeholder="例如：甜菜鐵錠、經書、噴灑器…" autocomplete="off"></label>
+        <div class="filter-group" aria-label="路線篩選">
+          <button class="filter active" data-filter="all">全部</button>
+          <button class="filter" data-filter="material">材料</button>
+          <button class="filter" data-filter="machine">機械</button>
+          <button class="filter" data-filter="temple">神殿</button>
+          <button class="filter" data-filter="equipment">裝備</button>
+        </div>
+      </div>
+      <div class="tree-layout">
+        <div class="graph-shell">
+          <div class="graph-help">拖曳空白處移動 · 滾輪縮放 · 點擊節點查看</div>
+          <div id="recipe-graph" class="recipe-graph" tabindex="0" aria-label="甜菜龐克合成樹"></div>
+          <div class="graph-controls"><button id="zoom-out" aria-label="縮小">−</button><button id="reset-view">重置</button><button id="zoom-in" aria-label="放大">＋</button></div>
+        </div>
+        <aside id="recipe-panel" class="recipe-panel" aria-live="polite">
+          <div class="panel-empty"><span>↖</span><h3>選擇一個物品</h3><p>查看它如何製作，又能通往哪些物品。</p></div>
+        </aside>
+      </div>
+      <p class="data-note">配方資料直接由模組的 149 份 JSON 與轉經桶程式規則產生。</p>
+    </section>
+
+    <section id="temples" class="section temple-section">
+      <div class="section-heading">
+        <div><p class="section-kicker">十三神殿</p><h2>從農務行為，長出範圍法則</h2></div>
+        <p>每座神殿依序放入 LV1–LV4 經書，效果半徑由 16 格擴張至 64 格。</p>
+      </div>
+      <div id="temple-grid" class="temple-grid"></div>
+    </section>
+
+    <section class="cta band">
+      <p class="section-kicker">目前版本 · 0.1.0</p>
+      <h2>世界只給你一株甜菜。<br>剩下的，自己轉出來。</h2>
+      <div class="hero-actions"><a class="button primary" href="https://github.com/gs60419/beetpunk-mod">前往 GitHub</a><a class="button ghost" href="#top">回到頂端</a></div>
+    </section>
+  </main>
+
+  <footer><p>BEETPUNK · by gs60419</p><p>以 CC0-1.0 釋出</p></footer>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

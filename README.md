@@ -2,6 +2,12 @@
 
 Fabric prototype for the Beetpunk Minecraft mod concept.
 
+## Website
+
+The visual guide and interactive crafting tree are available at:
+
+https://gs60419.github.io/beetpunk-mod/
+
 ## Current Scope
 
 - Minecraft Java 26.2
