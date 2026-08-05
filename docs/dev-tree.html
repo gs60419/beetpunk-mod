@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111619">
+  <meta name="description" content="甜菜龐克開發者配方依賴圖：由上而下檢視節點、配方投入與單次產出。">
+  <title>開發者配方樹｜甜菜龐克</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="dev-tree.css">
+</head>
+<body class="dev-page">
+  <header class="site-header dev-header">
+    <a class="brand" href="index.html"><span class="brand-mark">B</span><span><strong>甜菜龐克</strong><small>BEETPUNK</small></span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">選單</button>
+    <nav id="site-nav"><a href="tree.html">玩家合成樹</a><a class="active" href="#dependency-map">開發者視圖</a><a href="temples.html">十三神殿</a><a class="nav-github" href="https://github.com/gs60419/beetpunk-mod">GitHub ↗</a></nav>
+  </header>
+  <main>
+    <section class="dev-intro">
+      <div><p class="section-kicker">DEVELOPER DEPENDENCY MAP</p><h1>由上而下，<br>檢查每一步成本。</h1></div>
+      <div class="dev-legend"><span><i class="craft"></i>工作台合成</span><span><i class="process"></i>轉經加工</span><span><i class="event"></i>收成／行為取得</span><p>箭頭數字＝製作一次目標物品所需的直接投入；節點右上角＝單次產出。</p></div>
+    </section>
+    <section class="dev-toolbar">
+      <div class="dev-modes"><button class="active" data-view="overview">整體主幹</button><button data-view="trace">追蹤單一目標</button></div>
+      <form id="target-form" class="target-form"><label for="target-input">目標物品</label><input id="target-input" list="target-options" placeholder="例如：萌種神殿核心" disabled><datalist id="target-options"></datalist><button type="submit" disabled>建立成本樹</button></form>
+      <div class="dev-controls"><button id="zoom-out" aria-label="縮小">−</button><button id="reset-view">重置</button><button id="zoom-in" aria-label="放大">＋</button></div>
+    </section>
+    <section id="dependency-map" class="dependency-layout">
+      <div class="dev-viewport"><div class="dev-help">拖曳移動 · 滾輪縮放 · 點擊節點查看配方</div><div id="dev-stage" class="dev-stage"><svg id="dev-lines" aria-hidden="true"></svg><div id="dev-nodes"></div></div></div>
+      <aside id="dev-panel" class="dev-panel"><div class="dev-empty"><b>選擇節點</b><p>查看直接投入、單次產出與後續用途。</p></div></aside>
+    </section>
+  </main>
+  <footer><p>BEETPUNK · DEVELOPER MAP</p><p>成本來自目前模組配方資料</p></footer>
+  <script type="module" src="dev-tree.js"></script>
+</body>
+</html>
