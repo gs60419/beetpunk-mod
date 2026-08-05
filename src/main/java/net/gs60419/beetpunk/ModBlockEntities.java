@@ -14,9 +14,6 @@ public final class ModBlockEntities {
 		BuiltInRegistries.BLOCK_ENTITY_TYPE,
 		Identifier.fromNamespaceAndPath(Beetpunk.MOD_ID, "beet_processing_table"),
 		FabricBlockEntityTypeBuilder.create(BeetProcessingTableBlockEntity::new,
-			ModBlocks.BEET_PROCESSING_TABLE,
-			ModBlocks.BEET_GRINDER_TABLE,
-			ModBlocks.BEET_WASHING_TABLE,
 			ModBlocks.BEET_EXTRACTOR_BARREL,
 			ModBlocks.BEET_GRINDER_BARREL,
 			ModBlocks.BEET_WASHING_BARREL).build()

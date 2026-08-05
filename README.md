@@ -37,7 +37,6 @@ The current MVP centers on a beetroot-based skyblock material cycle:
 - `beet_extractor_barrel`: extractor route for liquids and residue.
 - `beet_grinder_barrel`: physical stone/mineral breakdown route.
 - `beet_washing_barrel`: filter-and-water washing route.
-- `beet_processing_table`, `beet_grinder_table`, `beet_washing_table`: older single-block workstation variants kept for compatibility/testing.
 - `beet_sprinkler`: consumes beet water for crop support.
 - `beet_harvest_box`: stores automated harvest output.
 - `beet_trading_table`: workstation for the Beet Sage villager.
@@ -64,4 +63,5 @@ The project notes live under:
 ```text
 DEVELOPMENT_LOG.md
 BEETPUNK_ROUTE_GUIDE.md
+CHANGELOG.md
 ```

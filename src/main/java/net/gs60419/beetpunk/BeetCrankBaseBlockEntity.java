@@ -467,13 +467,13 @@ public class BeetCrankBaseBlockEntity extends BlockEntity implements WorldlyCont
 	}
 
 	static StationType stationTypeForState(BlockState barrelState) {
-		if (barrelState.is(ModBlocks.BEET_EXTRACTOR_BARREL) || barrelState.is(ModBlocks.BEET_PROCESSING_TABLE)) {
+		if (barrelState.is(ModBlocks.BEET_EXTRACTOR_BARREL)) {
 			return StationType.EXTRACTOR;
 		}
-		if (barrelState.is(ModBlocks.BEET_GRINDER_BARREL) || barrelState.is(ModBlocks.BEET_GRINDER_TABLE)) {
+		if (barrelState.is(ModBlocks.BEET_GRINDER_BARREL)) {
 			return StationType.GRINDER;
 		}
-		if (barrelState.is(ModBlocks.BEET_WASHING_BARREL) || barrelState.is(ModBlocks.BEET_WASHING_TABLE)) {
+		if (barrelState.is(ModBlocks.BEET_WASHING_BARREL)) {
 			return StationType.WASHING;
 		}
 		return StationType.NONE;

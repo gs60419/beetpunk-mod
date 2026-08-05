@@ -273,15 +273,15 @@ public class BeetProcessingTableBlockEntity extends BlockEntity implements World
 	}
 
 	private StationType stationType() {
-		if (getBlockState().is(ModBlocks.BEET_PROCESSING_TABLE) || getBlockState().is(ModBlocks.BEET_EXTRACTOR_BARREL)) {
+		if (getBlockState().is(ModBlocks.BEET_EXTRACTOR_BARREL)) {
 			return StationType.EXTRACTOR;
 		}
 
-		if (getBlockState().is(ModBlocks.BEET_GRINDER_TABLE) || getBlockState().is(ModBlocks.BEET_GRINDER_BARREL)) {
+		if (getBlockState().is(ModBlocks.BEET_GRINDER_BARREL)) {
 			return StationType.GRINDER;
 		}
 
-		if (getBlockState().is(ModBlocks.BEET_WASHING_TABLE) || getBlockState().is(ModBlocks.BEET_WASHING_BARREL)) {
+		if (getBlockState().is(ModBlocks.BEET_WASHING_BARREL)) {
 			return StationType.WASHING;
 		}
 
@@ -306,10 +306,10 @@ public class BeetProcessingTableBlockEntity extends BlockEntity implements World
 	@Override
 	public Component getDisplayName() {
 		return Component.translatable(switch (stationType()) {
-			case EXTRACTOR -> "container.beetpunk.beet_extractor_table";
-			case GRINDER -> "container.beetpunk.beet_grinder_table";
-			case WASHING -> "container.beetpunk.beet_washing_table";
-			case NONE -> "container.beetpunk.beet_processing_table";
+			case EXTRACTOR -> "container.beetpunk.beet_extractor_barrel";
+			case GRINDER -> "container.beetpunk.beet_grinder_barrel";
+			case WASHING -> "container.beetpunk.beet_washing_barrel";
+			case NONE -> "container.beetpunk.beet_crank_base";
 		});
 	}
 

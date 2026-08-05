@@ -72,9 +72,6 @@ public final class ModBlocks {
 	public static final Block BEET_FARMLAND = register("beet_farmland", new BeetFarmlandBlock(properties("beet_farmland", BlockBehaviour.Properties.ofFullCopy(Blocks.FARMLAND))));
 	public static final Block FERTILIZED_BEET_SOIL = register("fertilized_beet_soil", new Block(properties("fertilized_beet_soil", BlockBehaviour.Properties.of().strength(0.6F))));
 	public static final Block FERTILIZED_BEET_FARMLAND = register("fertilized_beet_farmland", new FertilizedBeetFarmlandBlock(properties("fertilized_beet_farmland", BlockBehaviour.Properties.ofFullCopy(Blocks.FARMLAND))));
-	public static final Block BEET_PROCESSING_TABLE = register("beet_processing_table", new BeetProcessingTableBlock(properties("beet_processing_table", BlockBehaviour.Properties.of().strength(2.5F, 3.0F))));
-	public static final Block BEET_GRINDER_TABLE = register("beet_grinder_table", new BeetProcessingTableBlock(properties("beet_grinder_table", BlockBehaviour.Properties.of().strength(2.5F, 3.0F))));
-	public static final Block BEET_WASHING_TABLE = register("beet_washing_table", new BeetProcessingTableBlock(properties("beet_washing_table", BlockBehaviour.Properties.of().strength(2.5F, 3.0F))));
 	public static final Block BEET_CRANK_BASE = register("beet_crank_base", new BeetCrankBaseBlock(properties("beet_crank_base", woodProperties().strength(2.5F, 3.0F))));
 	public static final Block BEET_EXTRACTOR_BARREL = register("beet_extractor_barrel", new BeetProcessingTableBlock(properties("beet_extractor_barrel", BlockBehaviour.Properties.of().strength(2.5F, 3.0F))));
 	public static final Block BEET_GRINDER_BARREL = register("beet_grinder_barrel", new BeetProcessingTableBlock(properties("beet_grinder_barrel", BlockBehaviour.Properties.of().strength(2.5F, 3.0F))));

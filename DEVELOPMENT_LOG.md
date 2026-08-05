@@ -48,7 +48,7 @@ Copy-Item -LiteralPath '<project-path>\build\libs\beetpunk-0.1.0.jar' -Destinati
 
 ## 轉經桶處理系統
 
-舊的三種處理台仍存在，但目前偏好的 UX 是：
+目前正式 UX 是轉經底座加三種桶身；舊的三種單方塊處理台已移除：
 
 - `beet_crank_base` 是唯一真正開 UI 的處理底座。
 - 三種桶身是功能頭：
@@ -59,6 +59,7 @@ Copy-Item -LiteralPath '<project-path>\build\libs\beetpunk-0.1.0.jar' -Destinati
 - 對放在底座上的桶身 Shift + 右鍵：開底座 UI。
 - 對底座右鍵：開底座 UI。
 - 桶身單獨放置時不再打開舊處理 UI，只作為可手轉的視覺/手動物件。
+- 已移除舊方塊：`beet_processing_table`、`beet_grinder_table`、`beet_washing_table`。
 
 相關檔案：
 

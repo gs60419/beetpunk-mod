@@ -104,9 +104,6 @@ public final class ModItemGroups {
 				entries.accept(ModBlocks.BEET_FARMLAND);
 				entries.accept(ModBlocks.FERTILIZED_BEET_SOIL);
 				entries.accept(ModBlocks.FERTILIZED_BEET_FARMLAND);
-				entries.accept(ModBlocks.BEET_PROCESSING_TABLE);
-				entries.accept(ModBlocks.BEET_GRINDER_TABLE);
-				entries.accept(ModBlocks.BEET_WASHING_TABLE);
 				entries.accept(ModBlocks.BEET_CRANK_BASE);
 				entries.accept(ModBlocks.BEET_EXTRACTOR_BARREL);
 				entries.accept(ModBlocks.BEET_GRINDER_BARREL);
