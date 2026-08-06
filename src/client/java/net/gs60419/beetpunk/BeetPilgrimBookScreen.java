@@ -2,10 +2,12 @@ package net.gs60419.beetpunk;
 
 import java.util.List;
 
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.input.MouseButtonEvent;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.Identifier;
 
 public class BeetPilgrimBookScreen extends Screen {
 	private static final int BOOK_WIDTH = 260;
@@ -166,33 +168,18 @@ public class BeetPilgrimBookScreen extends Screen {
 			graphics.fill(x + 17, y + 17, x + 63, y + 63, 0x18A06A5F);
 			return;
 		}
-		int cx = x + 40;
-		int cy = y + 41;
 		if (glyphDone) {
-			drawGlyphMark(graphics, cx, cy, tier, 0xFF000000);
+			drawTotemTexture(graphics, x + 4, y + 5, tier, "glyph");
 		}
 		if (sealDone) {
-			drawSealMark(graphics, cx, cy, tier, 0xFFE6005B);
+			drawTotemTexture(graphics, x + 4, y + 5, tier, "temple");
 		}
 	}
 
-	private void drawGlyphMark(GuiGraphicsExtractor graphics, int cx, int cy, BeetTempleTier tier, int color) {
-		int index = tier.ordinal();
-		graphics.fill(cx - 28, cy - 24, cx + 28, cy - 17, color);
-		graphics.fill(cx - 28, cy + 17, cx + 28, cy + 24, color);
-		if (index % 3 != 0) {
-			graphics.fill(cx - 5, cy - 28, cx + 5, cy + 28, color);
-		}
-		if (index % 3 == 0 || index % 3 == 2) {
-			graphics.fill(cx - 24, cy - 5, cx + 24, cy + 5, color);
-		}
-	}
-
-	private void drawSealMark(GuiGraphicsExtractor graphics, int cx, int cy, BeetTempleTier tier, int color) {
-		int pad = 14 + tier.ordinal() % 3 * 2;
-		graphics.fill(cx - pad, cy - pad, cx + pad, cy + pad, color);
-		graphics.fill(cx - pad + 7, cy - pad + 7, cx + pad - 7, cy + pad - 7, PAGE_COLOR);
-		graphics.fill(cx - pad, cy - 4, cx + pad, cy + 4, color);
+	private void drawTotemTexture(GuiGraphicsExtractor graphics, int x, int y, BeetTempleTier tier, String layer) {
+		Identifier texture = Identifier.fromNamespaceAndPath(Beetpunk.MOD_ID,
+				"textures/gui/pilgrim_book/totems/ui/" + tier.path() + "_" + layer + ".png");
+		graphics.blit(RenderPipelines.GUI_TEXTURED, texture, x, y, 0.0F, 0.0F, 72, 72, 72, 72);
 	}
 
 	private String emblemStatus(boolean glyphDone, boolean sealDone) {

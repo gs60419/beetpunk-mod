@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Restored pilgrim book goshuin pages to use the prepared textured totem layers instead of clean geometric placeholder marks.
 - Added five Pilgrim Staff appearance stages driven by the holding player's temple seal progress.
 - Added Beet Pilgrim Staff harvesting: right-click mature beetroot crops to harvest them, with Beet Temple range, replanting, and harvest-box support at higher activation levels.
 - Removed the legacy single-block processing tables:
