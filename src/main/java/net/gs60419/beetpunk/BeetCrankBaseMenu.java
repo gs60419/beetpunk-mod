@@ -15,7 +15,7 @@ public class BeetCrankBaseMenu extends AbstractContainerMenu {
 	private static final int INPUT_SLOT = 0;
 	private static final int FUEL_SLOT = 1;
 	private static final int FIRST_OUTPUT_SLOT = 2;
-	private static final int DATA_COUNT = 4;
+	private static final int DATA_COUNT = 5;
 
 	private final Container container;
 	private final ContainerData data;
@@ -113,6 +113,15 @@ public class BeetCrankBaseMenu extends AbstractContainerMenu {
 			return 0;
 		}
 		return burn * height / maxBurn;
+	}
+
+	public BeetCrankBaseBlockEntity.StationType stationType() {
+		int ordinal = data.get(4);
+		BeetCrankBaseBlockEntity.StationType[] values = BeetCrankBaseBlockEntity.StationType.values();
+		if (ordinal < 0 || ordinal >= values.length) {
+			return BeetCrankBaseBlockEntity.StationType.NONE;
+		}
+		return values[ordinal];
 	}
 
 	private void addPlayerInventory(Inventory playerInventory) {

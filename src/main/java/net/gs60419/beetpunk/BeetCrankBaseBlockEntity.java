@@ -71,6 +71,7 @@ public class BeetCrankBaseBlockEntity extends BlockEntity implements WorldlyCont
 				case 1 -> maxProgress;
 				case 2 -> burnTicks;
 				case 3 -> maxBurnTicks;
+				case 4 -> stationType(worldPosition).ordinal();
 				default -> 0;
 			};
 		}
@@ -89,7 +90,7 @@ public class BeetCrankBaseBlockEntity extends BlockEntity implements WorldlyCont
 
 		@Override
 		public int getCount() {
-			return 4;
+			return 5;
 		}
 	};
 

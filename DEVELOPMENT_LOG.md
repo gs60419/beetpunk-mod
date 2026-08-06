@@ -1,6 +1,6 @@
 # 甜菜龐克 26.2 開發紀錄
 
-最後更新：2026-08-03
+最後更新：2026-08-06
 
 這份文件是給後續 Codex / 優優接手用的快速交接筆記。改模組前請先讀這份。
 
@@ -70,6 +70,8 @@ Copy-Item -LiteralPath '<project-path>\build\libs\beetpunk-0.1.0.jar' -Destinati
 - 對放在底座上的桶身 Shift + 右鍵：開底座 UI。
 - 對底座右鍵：開底座 UI。
 - 桶身單獨放置時不再打開舊處理 UI，只作為可手轉的視覺/手動物件。
+- 轉經底座 UI 右側有配方提示側欄，會依上方桶身顯示榨取、研磨或篩洗配方。
+- 配方側欄支援展開/收合、點選配方列、輸入與輸出圖示預覽、滑鼠提示與背包缺料提示。
 - 已移除舊方塊：`beet_processing_table`、`beet_grinder_table`、`beet_washing_table`。
 
 相關檔案：
