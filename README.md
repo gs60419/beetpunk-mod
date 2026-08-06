@@ -23,7 +23,7 @@ The current MVP centers on a beetroot-based skyblock material cycle:
 - Beet blocks dehydrate into the stone route, then branch into cobblestone, gravel, sand, soil, iron dust, redstone dust, crystal grain, clay, and dripstone materials.
 - Beet oil, beet water drops, beet water, filters, residue, and fertilizer support the extractor, grinder, washing table, sprinkler, and soil upgrades.
 - Beet iron ingots support the beet-iron tool and armor route.
-- The pilgrim staff handles the merged utility-tool path for planting, soil transformation, and growth support.
+- The pilgrim staff handles the merged utility-tool path for planting, soil transformation, growth support, and beetroot harvesting.
 - The pilgrim book is the combined route guide and seal book.
 - All 13 temple cores, glyphs, and 4 scripture levels are registered.
 - Temple cores use scripture books for activation levels and the pilgrim book for seals.

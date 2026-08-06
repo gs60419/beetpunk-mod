@@ -97,6 +97,42 @@ public final class ModGlyphDrops {
         }
     }
 
+    public static int harvestBeetrootsWithStaff(ServerLevel level, BlockPos center, ServerPlayer player) {
+        int templeLevel = TempleEffects.nearbyTempleLevel(level, center, ModBlocks.BEET_TEMPLE_CORE);
+        int radius = templeLevel >= BeetTempleCoreBlock.MAX_TEMPLE_LEVEL ? 2 : templeLevel >= 2 ? 1 : 0;
+        boolean replant = templeLevel >= 3;
+        boolean collectToBox = templeLevel >= BeetTempleCoreBlock.MAX_TEMPLE_LEVEL;
+        int harvested = 0;
+
+        for (int x = -radius; x <= radius; x++) {
+            for (int z = -radius; z <= radius; z++) {
+                BlockPos target = center.offset(x, 0, z);
+                if (!isMatureBeetroot(level.getBlockState(target))) {
+                    continue;
+                }
+
+                dropBeetHarvestOutput(level, target, new ItemStack(Items.BEETROOT), collectToBox);
+                dropBeetHarvestOutput(level, target, new ItemStack(Items.BEETROOT_SEEDS, 1 + level.getRandom().nextInt(3)), collectToBox);
+                if (templeLevel > 0 && level.getRandom().nextFloat() < BEET_LV1_BONUS_CHANCE) {
+                    dropBeetHarvestOutput(level, target, new ItemStack(Items.BEETROOT), collectToBox);
+                }
+                dropLeafTempleHarvest(level, target, player);
+                dropSoilGlyph(level, target, player);
+                dropSproutGlyph(level, target, player);
+                level.setBlock(target, Blocks.AIR.defaultBlockState(), 3);
+                harvested++;
+                if (replant) {
+                    replant(target, player, harvested, templeLevel);
+                }
+            }
+        }
+
+        if (harvested > 0) {
+            ModAdvancements.award(player, ModAdvancements.FIRST_HAND_HARVEST, "hand_harvest");
+        }
+        return harvested;
+    }
+
     private static void dropBeetHarvestOutput(ServerLevel level, BlockPos pos, ItemStack stack, boolean collectToBox) {
         if (collectToBox && ModHarvestBoxes.tryInsertNearby(level, pos, stack)) {
             return;

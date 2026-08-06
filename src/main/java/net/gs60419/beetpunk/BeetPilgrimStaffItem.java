@@ -41,7 +41,7 @@ public class BeetPilgrimStaffItem extends Item {
 			return plantSeeds(context);
 		}
 		if (level.getBlockState(pos).is(Blocks.BEETROOTS)) {
-			return growBeetroot(context);
+			return isMatureBeetroot(level.getBlockState(pos)) ? harvestBeetroot(context) : growBeetroot(context);
 		}
 		return InteractionResult.PASS;
 	}
@@ -138,6 +138,29 @@ public class BeetPilgrimStaffItem extends Item {
 		return transformed;
 	}
 
+	private static InteractionResult harvestBeetroot(UseOnContext context) {
+		Level level = context.getLevel();
+		Player player = context.getPlayer();
+		BlockPos pos = context.getClickedPos();
+		if (player == null) {
+			return InteractionResult.PASS;
+		}
+		if (level.isClientSide()) {
+			return InteractionResult.SUCCESS;
+		}
+		if (!(player instanceof ServerPlayer serverPlayer)) {
+			return InteractionResult.FAIL;
+		}
+
+		int harvested = ModGlyphDrops.harvestBeetrootsWithStaff((ServerLevel) level, pos, serverPlayer);
+		if (harvested == 0) {
+			return InteractionResult.FAIL;
+		}
+
+		level.playSound(null, pos, SoundEvents.CROP_BREAK, SoundSource.BLOCKS, 0.8F, 1.0F);
+		return InteractionResult.SUCCESS;
+	}
+
 	private static InteractionResult growBeetroot(UseOnContext context) {
 		Level level = context.getLevel();
 		BlockPos pos = context.getClickedPos();
@@ -167,6 +190,11 @@ public class BeetPilgrimStaffItem extends Item {
 			}
 		}
 		return grown;
+	}
+
+	private static boolean isMatureBeetroot(BlockState state) {
+		return state.is(Blocks.BEETROOTS)
+				&& state.getValue(BeetrootBlock.AGE) >= BeetrootBlock.MAX_AGE;
 	}
 
 	private static boolean growBeetroot(ServerLevel level, BlockPos pos, int steps) {
