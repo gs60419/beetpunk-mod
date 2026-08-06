@@ -1,6 +1,48 @@
 {
-    "model":  {
-                  "type":  "minecraft:model",
-                  "model":  "beetpunk:item/beet_pilgrim_staff"
-              }
+  "model": {
+    "type": "minecraft:range_dispatch",
+    "property": "minecraft:custom_model_data",
+    "index": 0,
+    "entries": [
+      {
+        "threshold": 0,
+        "model": {
+          "type": "minecraft:model",
+          "model": "beetpunk:item/beet_pilgrim_staff"
+        }
+      },
+      {
+        "threshold": 1,
+        "model": {
+          "type": "minecraft:model",
+          "model": "beetpunk:item/beet_pilgrim_staff_stage_1"
+        }
+      },
+      {
+        "threshold": 4,
+        "model": {
+          "type": "minecraft:model",
+          "model": "beetpunk:item/beet_pilgrim_staff_stage_4"
+        }
+      },
+      {
+        "threshold": 8,
+        "model": {
+          "type": "minecraft:model",
+          "model": "beetpunk:item/beet_pilgrim_staff_stage_8"
+        }
+      },
+      {
+        "threshold": 13,
+        "model": {
+          "type": "minecraft:model",
+          "model": "beetpunk:item/beet_pilgrim_staff_stage_13"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "beetpunk:item/beet_pilgrim_staff"
+    }
+  }
 }

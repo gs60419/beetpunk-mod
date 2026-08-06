@@ -55,6 +55,7 @@ Copy-Item -LiteralPath '<project-path>\build\libs\beetpunk-0.1.0.jar' -Destinati
 - 右鍵未成熟甜菜：催熟甜菜，受壯苗神殿等級影響。
 - 右鍵成熟甜菜：採收甜菜，受甜菜神殿等級影響。
 - 甜菜神殿 LV2 擴大採收範圍，LV3 採後補種，LV4 可將收成導入附近甜菜收成箱。
+- 外觀會依持有玩家的神殿朱印數自動切換：0、1、4、8、13 印五階；目前用 `CustomModelData` 在背包 tick 時刷新，功能仍以玩家進度判定。
 
 ## 轉經桶處理系統
 

@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Added five Pilgrim Staff appearance stages driven by the holding player's temple seal progress.
 - Added Beet Pilgrim Staff harvesting: right-click mature beetroot crops to harvest them, with Beet Temple range, replanting, and harvest-box support at higher activation levels.
 - Removed the legacy single-block processing tables:
   - `beet_processing_table`

@@ -1,16 +1,22 @@
 package net.gs60419.beetpunk;
 
+import java.util.List;
+
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.component.CustomModelData;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BeetrootBlock;
@@ -23,6 +29,14 @@ public class BeetPilgrimStaffItem extends Item {
 
 	public BeetPilgrimStaffItem(Properties properties) {
 		super(properties);
+	}
+
+	@Override
+	public void inventoryTick(ItemStack stack, ServerLevel level, Entity entity, EquipmentSlot slot) {
+		super.inventoryTick(stack, level, entity, slot);
+		if (entity instanceof ServerPlayer player) {
+			updatePilgrimStage(stack, player);
+		}
 	}
 
 	@Override
@@ -291,5 +305,43 @@ public class BeetPilgrimStaffItem extends Item {
 			}
 		}
 		return false;
+	}
+
+	private static void updatePilgrimStage(ItemStack stack, ServerPlayer player) {
+		int stage = pilgrimStage(player);
+		CustomModelData current = stack.get(DataComponents.CUSTOM_MODEL_DATA);
+		Float currentStage = current == null ? null : current.getFloat(0);
+		if (currentStage != null && currentStage.intValue() == stage) {
+			return;
+		}
+
+		stack.set(DataComponents.CUSTOM_MODEL_DATA, new CustomModelData(
+				List.of((float) stage),
+				List.of(),
+				List.of(),
+				List.of()));
+	}
+
+	private static int pilgrimStage(ServerPlayer player) {
+		int sealed = 0;
+		for (BeetTempleTier tier : BeetTempleTier.values()) {
+			if (ModAdvancements.isDone(player, tier.sealTempleAdvancementId())) {
+				sealed++;
+			}
+		}
+
+		if (sealed >= 13) {
+			return 13;
+		}
+		if (sealed >= 8) {
+			return 8;
+		}
+		if (sealed >= 4) {
+			return 4;
+		}
+		if (sealed >= 1) {
+			return 1;
+		}
+		return 0;
 	}
 }
