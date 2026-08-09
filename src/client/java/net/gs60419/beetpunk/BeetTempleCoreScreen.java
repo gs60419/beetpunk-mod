@@ -94,7 +94,7 @@ public class BeetTempleCoreScreen extends AbstractContainerScreen<BeetTempleCore
 		} else {
 			lines.add(Component.translatable("screen.beetpunk.temple_core.inactive"));
 		}
-		lines.add(Component.translatable("screen.beetpunk.temple_core.effect." + level));
+		lines.add(Component.translatable("screen.beetpunk.temple_core.effect." + menu.tier().path() + "." + level));
 		return lines;
 	}
 }
