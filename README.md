@@ -21,7 +21,7 @@ The current MVP centers on a beetroot-based skyblock material cycle:
 - Mature vanilla beetroot crops drop the original beetroot plus Beetpunk byproducts such as beet leaves.
 - Beet leaves lead into fiber, cloth, sticks, wood-like blocks, beds, signs, boats, and tool recipes.
 - Beet blocks dehydrate into the stone route, then branch into cobblestone, gravel, sand, soil, iron dust, redstone dust, crystal grain, clay, and dripstone materials.
-- Beet oil, beet water drops, beet water, filters, residue, and fertilizer support the extractor, grinder, washing table, sprinkler, and soil upgrades.
+- Beet oil, beet water drops, beet water, filters, residue, and fertilizer support the extractor, grinder, washing barrel, sprinkler, and soil upgrades.
 - Beet iron ingots support the beet-iron tool and armor route.
 - The pilgrim staff handles the merged utility-tool path for planting, soil transformation, growth support, and beetroot harvesting.
 - The pilgrim book is the combined route guide and seal book.
