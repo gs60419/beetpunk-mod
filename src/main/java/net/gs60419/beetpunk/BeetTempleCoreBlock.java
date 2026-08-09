@@ -69,7 +69,7 @@ public class BeetTempleCoreBlock extends Block implements EntityBlock {
 
 		int scriptureLevel = scriptureLevel(stack);
 		if (scriptureLevel == 0) {
-			return InteractionResult.PASS;
+			return player.isShiftKeyDown() ? InteractionResult.PASS : openCoreMenu(level, pos, player);
 		}
 
 		if (!level.isClientSide()) {
@@ -114,10 +114,7 @@ public class BeetTempleCoreBlock extends Block implements EntityBlock {
 	@Override
 	protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
 		if (!player.isShiftKeyDown()) {
-			if (!level.isClientSide() && level.getBlockEntity(pos) instanceof MenuProvider provider) {
-				player.openMenu(provider);
-			}
-			return InteractionResult.SUCCESS;
+			return openCoreMenu(level, pos, player);
 		}
 
 		if (!level.isClientSide() && level.getBlockEntity(pos) instanceof BeetTempleCoreBlockEntity core) {
@@ -129,6 +126,23 @@ public class BeetTempleCoreBlock extends Block implements EntityBlock {
 			}
 		}
 		return InteractionResult.SUCCESS;
+	}
+
+	private InteractionResult openCoreMenu(Level level, BlockPos pos, Player player) {
+		if (level.isClientSide()) {
+			return InteractionResult.SUCCESS;
+		}
+		if (!(level.getBlockEntity(pos) instanceof BeetTempleCoreBlockEntity)) {
+			BlockEntity blockEntity = newBlockEntity(pos, level.getBlockState(pos));
+			if (blockEntity != null) {
+				level.setBlockEntity(blockEntity);
+			}
+		}
+		if (level.getBlockEntity(pos) instanceof MenuProvider provider) {
+			player.openMenu(provider);
+			return InteractionResult.SUCCESS;
+		}
+		return InteractionResult.PASS;
 	}
 
 	@Override

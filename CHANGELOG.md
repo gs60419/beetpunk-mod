@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Made temple core interaction more robust: non-special right-clicks open the core UI and missing core block entities are repaired on interaction.
 - Changed pilgrim-book temple visits so they play seal feedback without granting formal temple certification advancements.
 - Added one-time temple milestone performances for the first, fourth, twelfth, and thirteenth unique LV4 temple cores.
 - Added low-frequency temple ambience: active cores now emit subtle theme-colored particles, with stronger range ambience and rare chimes at LV4.
