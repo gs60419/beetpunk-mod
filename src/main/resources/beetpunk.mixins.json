@@ -4,6 +4,7 @@
   "package": "net.gs60419.beetpunk.mixin",
   "compatibilityLevel": "JAVA_25",
   "mixins": [
+    "CropBlockMixin",
     "MobGoalSelectorAccessor",
     "PigMixin"
   ],

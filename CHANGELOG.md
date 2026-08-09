@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Fixed vanilla crop planting on Beet Farmland and Fertilized Beet Farmland.
 - Added first-pass temple world performances for scripture insertion, pilgrim-book sealing, all-13-seal completion, and revelation use.
 - Added dedicated and universal crank-base barrel modes: same-type barrel stacks keep their speed bonus, while mixed barrel stacks can process recipes for each installed barrel type.
 - Standalone prayer barrels now crank the entire connected barrel stack when used, even without a crank base.
