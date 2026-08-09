@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Redrew Beet Pilgrim Staff progression textures as 32px ceremonial shrine-staff icons.
 - Added temple-specific LV1-LV4 effect descriptions to temple core slot tooltips.
 - Added missing temple core slot tooltip translations.
 - Made temple core interaction more robust: non-special right-clicks open the core UI and missing core block entities are repaired on interaction.
