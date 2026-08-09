@@ -91,6 +91,7 @@ public class BeetTempleCoreBlock extends Block implements EntityBlock {
 			} else {
 				vanillaEntityType("villager").spawn(serverLevel, spawnPos, EntitySpawnReason.MOB_SUMMONED);
 			}
+			ModWorldPerformances.revelation(serverLevel, pos);
 			level.playSound(null, pos, SoundEvents.BEACON_POWER_SELECT, SoundSource.BLOCKS, 1.0F, 1.0F);
 			if (!player.getAbilities().instabuild) {
 				stack.shrink(1);
@@ -169,9 +170,17 @@ public class BeetTempleCoreBlock extends Block implements EntityBlock {
 
 		syncGlow(state, level, pos, core.level());
 		level.playSound(null, pos, SoundEvents.BEACON_ACTIVATE, SoundSource.BLOCKS, 0.8F, 0.9F + scriptureLevel * 0.15F);
+		if (level instanceof ServerLevel serverLevel) {
+			ModWorldPerformances.templeLevelUp(serverLevel, pos, core.level());
+		}
 
 		if (player instanceof ServerPlayer serverPlayer) {
+			boolean alreadySealed = ModAdvancements.isDone(serverPlayer, tier.sealTempleAdvancementId());
 			ModAdvancements.award(serverPlayer, tier.sealTempleAdvancementId(), "sealed");
+			int sealCount = templeSealCount(serverPlayer);
+			if (!alreadySealed && sealCount >= BeetTempleTier.values().length && level instanceof ServerLevel serverLevel) {
+				ModWorldPerformances.templeSeal(serverLevel, pos, sealCount, true);
+			}
 			if (tier == BeetTempleTier.PIG && scriptureLevel == MAX_TEMPLE_LEVEL && hasAllTwelveTempleSeals(serverPlayer)) {
 				Block.popResource(level, pos, new ItemStack(ModItems.SUPREME_GLYPH));
 			}
@@ -206,6 +215,16 @@ public class BeetTempleCoreBlock extends Block implements EntityBlock {
 		return true;
 	}
 
+	private static int templeSealCount(ServerPlayer player) {
+		int count = 0;
+		for (BeetTempleTier templeTier : BeetTempleTier.values()) {
+			if (ModAdvancements.isDone(player, templeTier.sealTempleAdvancementId())) {
+				count++;
+			}
+		}
+		return count;
+	}
+
 	private InteractionResult handlePilgrimBook(BlockState state, Level level,
 													BlockPos pos, Player player) {
 		if (!isActive(state)) {
@@ -213,6 +232,17 @@ public class BeetTempleCoreBlock extends Block implements EntityBlock {
 		}
 
 		if (!level.isClientSide()) {
+			boolean completedAllSeals = false;
+			int sealCount = 0;
+			if (player instanceof ServerPlayer serverPlayer) {
+				boolean alreadySealed = ModAdvancements.isDone(serverPlayer, tier.sealTempleAdvancementId());
+				ModAdvancements.award(serverPlayer, tier.sealTempleAdvancementId(), "sealed");
+				sealCount = templeSealCount(serverPlayer);
+				completedAllSeals = !alreadySealed && sealCount >= BeetTempleTier.values().length;
+			}
+			if (level instanceof ServerLevel serverLevel) {
+				ModWorldPerformances.templeSeal(serverLevel, pos, sealCount, completedAllSeals);
+			}
 			level.playSound(null, pos, SoundEvents.ENCHANTMENT_TABLE_USE, SoundSource.BLOCKS, 0.8F, 1.0F);
 		}
 

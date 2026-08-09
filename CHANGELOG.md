@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Added first-pass temple world performances for scripture insertion, pilgrim-book sealing, all-13-seal completion, and revelation use.
 - Added dedicated and universal crank-base barrel modes: same-type barrel stacks keep their speed bonus, while mixed barrel stacks can process recipes for each installed barrel type.
 - Standalone prayer barrels now crank the entire connected barrel stack when used, even without a crank base.
 - Fixed standalone stacked prayer barrels staying on the transparent spin-anchor model after the second or higher barrel stopped spinning.
