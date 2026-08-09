@@ -2,6 +2,7 @@ package net.gs60419.beetpunk;
 
 import java.util.List;
 import java.util.Map;
+import java.util.ArrayList;
 
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
@@ -24,6 +25,9 @@ public class BeetCrankBaseScreen extends AbstractContainerScreen<BeetCrankBaseMe
 	private static final int RECIPE_PANEL_WIDTH = 116;
 	private static final int RECIPE_ROW_HEIGHT = 25;
 	private static final int RECIPE_VISIBLE_ROWS = 4;
+	private static final int EXTRACTOR_MASK = 1;
+	private static final int GRINDER_MASK = 2;
+	private static final int WASHING_MASK = 4;
 	private static final Map<BeetCrankBaseBlockEntity.StationType, List<RecipeHint>> RECIPE_HINTS = Map.of(
 			BeetCrankBaseBlockEntity.StationType.EXTRACTOR, List.of(
 					new RecipeHint(new ItemStack(ModBlocks.BEET_BLOCK), new ItemStack(ModBlocks.DRIED_BEET_BLOCK), new ItemStack(ModItems.BEET_WATER_DROP), "榨出水滴"),
@@ -203,6 +207,20 @@ public class BeetCrankBaseScreen extends AbstractContainerScreen<BeetCrankBaseMe
 	}
 
 	private List<RecipeHint> visibleRecipes() {
+		if (menu.stationType() == BeetCrankBaseBlockEntity.StationType.UNIVERSAL) {
+			List<RecipeHint> recipes = new ArrayList<>();
+			int mask = menu.barrelTypeMask();
+			if ((mask & EXTRACTOR_MASK) != 0) {
+				recipes.addAll(RECIPE_HINTS.getOrDefault(BeetCrankBaseBlockEntity.StationType.EXTRACTOR, List.of()));
+			}
+			if ((mask & GRINDER_MASK) != 0) {
+				recipes.addAll(RECIPE_HINTS.getOrDefault(BeetCrankBaseBlockEntity.StationType.GRINDER, List.of()));
+			}
+			if ((mask & WASHING_MASK) != 0) {
+				recipes.addAll(RECIPE_HINTS.getOrDefault(BeetCrankBaseBlockEntity.StationType.WASHING, List.of()));
+			}
+			return recipes;
+		}
 		return RECIPE_HINTS.getOrDefault(menu.stationType(), List.of());
 	}
 
@@ -226,6 +244,7 @@ public class BeetCrankBaseScreen extends AbstractContainerScreen<BeetCrankBaseMe
 			case EXTRACTOR -> "榨取桶";
 			case GRINDER -> "研磨桶";
 			case WASHING -> "篩洗桶";
+			case UNIVERSAL -> "萬能筒組";
 			case NONE -> "未安裝桶身";
 		};
 	}

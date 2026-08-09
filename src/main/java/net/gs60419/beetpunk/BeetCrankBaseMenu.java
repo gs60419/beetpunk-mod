@@ -15,7 +15,7 @@ public class BeetCrankBaseMenu extends AbstractContainerMenu {
 	private static final int INPUT_SLOT = 0;
 	private static final int FUEL_SLOT = 1;
 	private static final int FIRST_OUTPUT_SLOT = 2;
-	private static final int DATA_COUNT = 5;
+	private static final int DATA_COUNT = 6;
 
 	private final Container container;
 	private final ContainerData data;
@@ -122,6 +122,10 @@ public class BeetCrankBaseMenu extends AbstractContainerMenu {
 			return BeetCrankBaseBlockEntity.StationType.NONE;
 		}
 		return values[ordinal];
+	}
+
+	public int barrelTypeMask() {
+		return data.get(5);
 	}
 
 	private void addPlayerInventory(Inventory playerInventory) {

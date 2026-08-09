@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Added dedicated and universal crank-base barrel modes: same-type barrel stacks keep their speed bonus, while mixed barrel stacks can process recipes for each installed barrel type.
+- Standalone prayer barrels now crank the entire connected barrel stack when used, even without a crank base.
 - Fixed standalone stacked prayer barrels staying on the transparent spin-anchor model after the second or higher barrel stopped spinning.
 - Moved the crank-base recipe hint side panel to the left side of the UI so it no longer overlaps JEI's item list.
 - Added Beet on a Stick as a beetroot-themed pig-riding controller, including item texture, recipe, localization, creative tab entry, and pig control support.

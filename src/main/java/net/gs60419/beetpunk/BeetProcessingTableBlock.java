@@ -155,10 +155,7 @@ public class BeetProcessingTableBlock extends Block implements EntityBlock {
 
 		if (isPrayerBarrel(state)) {
 			if (level.getBlockEntity(pos) instanceof BeetProcessingTableBlockEntity processingTable) {
-				if (!level.isClientSide()) {
-					setSpinning(level, pos, state, true);
-				}
-				processingTable.crank();
+				crankStandaloneStack(level, pos);
 				if (level.isClientSide()) {
 					level.addParticle(ParticleTypes.CRIT,
 						pos.getX() + 0.5D,
@@ -215,6 +212,25 @@ public class BeetProcessingTableBlock extends Block implements EntityBlock {
 
 	private static boolean processingTableShouldCrank(BlockState state, Level level, BlockPos pos, Player player) {
 		return state.getBlock() instanceof BeetProcessingTableBlock block && block.crankable;
+	}
+
+	private static void crankStandaloneStack(Level level, BlockPos pos) {
+		BlockPos bottom = pos;
+		while (isPrayerBarrel(level.getBlockState(bottom.below()))) {
+			bottom = bottom.below();
+		}
+
+		BlockPos scanPos = bottom;
+		while (isPrayerBarrel(level.getBlockState(scanPos))) {
+			BlockState barrelState = level.getBlockState(scanPos);
+			if (!level.isClientSide()) {
+				setSpinning(level, scanPos, barrelState, true);
+			}
+			if (level.getBlockEntity(scanPos) instanceof BeetProcessingTableBlockEntity processingTable) {
+				processingTable.crank();
+			}
+			scanPos = scanPos.above();
+		}
 	}
 
 	static boolean openMenu(Level level, BlockPos pos, Player player) {

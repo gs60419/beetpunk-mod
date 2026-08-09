@@ -37,6 +37,9 @@ public class BeetCrankBaseBlockEntity extends BlockEntity implements WorldlyCont
 	private static final int SOIL_ROUTE_TIME = 100;
 	private static final int AUTO_CRANK_INTERVAL = 8;
 	private static final int MAX_BARREL_STACK = 4;
+	private static final int EXTRACTOR_MASK = 1;
+	private static final int GRINDER_MASK = 2;
+	private static final int WASHING_MASK = 4;
 	private static final int CRANK_TICKS = 16;
 	private static final float MAX_SPIN_SPEED = 24.0F;
 	private static final float SPIN_ACCELERATION = 4.0F;
@@ -72,6 +75,7 @@ public class BeetCrankBaseBlockEntity extends BlockEntity implements WorldlyCont
 				case 2 -> burnTicks;
 				case 3 -> maxBurnTicks;
 				case 4 -> stationType(worldPosition).ordinal();
+				case 5 -> barrelTypeMask(worldPosition);
 				default -> 0;
 			};
 		}
@@ -90,7 +94,7 @@ public class BeetCrankBaseBlockEntity extends BlockEntity implements WorldlyCont
 
 		@Override
 		public int getCount() {
-			return 5;
+			return 6;
 		}
 	};
 
@@ -415,14 +419,13 @@ public class BeetCrankBaseBlockEntity extends BlockEntity implements WorldlyCont
 		if (level == null || level.isClientSide()) {
 			return;
 		}
-		StationType type = stationType(worldPosition);
-		if (type == StationType.NONE) {
+		if (barrelTypeMask(worldPosition) == 0) {
 			return;
 		}
 		for (int i = 1; i <= MAX_BARREL_STACK; i++) {
 			BlockPos barrelPos = worldPosition.above(i);
 			BlockState barrelState = level.getBlockState(barrelPos);
-			if (stationTypeForState(barrelState) != type) {
+			if (!isPrayerBarrel(barrelState)) {
 				return;
 			}
 			BeetProcessingTableBlock.setSpinning(level, barrelPos, barrelState, spinning);
@@ -434,19 +437,46 @@ public class BeetCrankBaseBlockEntity extends BlockEntity implements WorldlyCont
 	}
 
 	private ProcessingRecipe getCurrentRecipe(ServerLevel level, BlockPos pos) {
-		return switch (stationType(pos)) {
-			case EXTRACTOR -> extractorRecipe(TempleEffects.nearbyTempleLevel(level, pos, ModBlocks.ROOT_TEMPLE_CORE));
-			case GRINDER -> grinderRecipe();
-			case WASHING -> washingRecipe();
-			case NONE -> null;
-		};
+		int mask = barrelTypeMask(pos);
+		if ((mask & EXTRACTOR_MASK) != 0) {
+			ProcessingRecipe recipe = extractorRecipe(TempleEffects.nearbyTempleLevel(level, pos, ModBlocks.ROOT_TEMPLE_CORE));
+			if (recipe != null) {
+				return recipe;
+			}
+		}
+		if ((mask & GRINDER_MASK) != 0) {
+			ProcessingRecipe recipe = grinderRecipe();
+			if (recipe != null) {
+				return recipe;
+			}
+		}
+		if ((mask & WASHING_MASK) != 0) {
+			return washingRecipe();
+		}
+		return null;
 	}
 
 	private StationType stationType(BlockPos pos) {
-		if (level == null) {
+		int mask = barrelTypeMask(pos);
+		if (mask == 0) {
 			return StationType.NONE;
 		}
-		return stationTypeForState(level.getBlockState(pos.above()));
+		return Integer.bitCount(mask) == 1 ? stationTypeForMask(mask) : StationType.UNIVERSAL;
+	}
+
+	private int barrelTypeMask(BlockPos pos) {
+		if (level == null) {
+			return 0;
+		}
+		int mask = 0;
+		for (int i = 1; i <= MAX_BARREL_STACK; i++) {
+			StationType type = stationTypeForState(level.getBlockState(pos.above(i)));
+			if (type == StationType.NONE) {
+				break;
+			}
+			mask |= maskFor(type);
+		}
+		return mask;
 	}
 
 	private int barrelStackHeight(BlockPos pos) {
@@ -465,6 +495,24 @@ public class BeetCrankBaseBlockEntity extends BlockEntity implements WorldlyCont
 			height++;
 		}
 		return Math.max(1, height);
+	}
+
+	private static StationType stationTypeForMask(int mask) {
+		return switch (mask) {
+			case EXTRACTOR_MASK -> StationType.EXTRACTOR;
+			case GRINDER_MASK -> StationType.GRINDER;
+			case WASHING_MASK -> StationType.WASHING;
+			default -> StationType.UNIVERSAL;
+		};
+	}
+
+	private static int maskFor(StationType type) {
+		return switch (type) {
+			case EXTRACTOR -> EXTRACTOR_MASK;
+			case GRINDER -> GRINDER_MASK;
+			case WASHING -> WASHING_MASK;
+			case UNIVERSAL, NONE -> 0;
+		};
 	}
 
 	static StationType stationTypeForState(BlockState barrelState) {
@@ -617,6 +665,7 @@ public class BeetCrankBaseBlockEntity extends BlockEntity implements WorldlyCont
 		EXTRACTOR,
 		GRINDER,
 		WASHING,
+		UNIVERSAL,
 		NONE
 	}
 }
