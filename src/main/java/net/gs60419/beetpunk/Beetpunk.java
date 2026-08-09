@@ -24,6 +24,7 @@ public class Beetpunk implements ModInitializer {
 		ModFlammables.register();
 		ModGlyphDrops.register();
 		ModDyeGlyphDrops.register();
+		ModTempleAmbience.register();
 		ModSproutTempleEffects.register();
 		ModLightTempleEffects.register();
 		ModGeothermalEffects.register();
