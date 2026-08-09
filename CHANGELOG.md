@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Moved the crank-base recipe hint side panel to the left side of the UI so it no longer overlaps JEI's item list.
 - Added Beet on a Stick as a beetroot-themed pig-riding controller, including item texture, recipe, localization, creative tab entry, and pig control support.
 - Added a crank-base recipe hint side panel that switches between extractor, grinder, and washing recipes based on the barrel installed above the base.
 - Restored pilgrim book goshuin pages to use the prepared textured totem layers instead of clean geometric placeholder marks.

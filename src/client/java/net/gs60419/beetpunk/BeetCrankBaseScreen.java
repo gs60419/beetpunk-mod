@@ -66,7 +66,7 @@ public class BeetCrankBaseScreen extends AbstractContainerScreen<BeetCrankBaseMe
 		drawHotbarSlots(graphics, x + 7, y + 141);
 		drawRecipeToggle(graphics, x, y);
 		if (recipesOpen) {
-			drawRecipePanel(graphics, mouseX, mouseY, x + imageWidth + 4, y);
+			drawRecipePanel(graphics, mouseX, mouseY, recipePanelX(), y);
 		}
 		super.extractContents(graphics, mouseX, mouseY, partialTick);
 	}
@@ -89,7 +89,7 @@ public class BeetCrankBaseScreen extends AbstractContainerScreen<BeetCrankBaseMe
 		}
 
 		if (recipesOpen) {
-			int panelX = leftPos + imageWidth + 4;
+			int panelX = recipePanelX();
 			int panelY = topPos;
 			if (inside(mouseX, mouseY, panelX + 94, panelY + 18, 12, 12)) {
 				scrollRecipes(-1);
@@ -117,6 +117,10 @@ public class BeetCrankBaseScreen extends AbstractContainerScreen<BeetCrankBaseMe
 		graphics.fill(toggleX, toggleY, toggleX + 12, toggleY + 12, recipesOpen ? 0xFFE05B61 : SLOT_COLOR);
 		graphics.fill(toggleX + 1, toggleY + 1, toggleX + 11, toggleY + 11, INNER_COLOR);
 		graphics.text(font, "?", toggleX + 4, toggleY + 2, TEXT_COLOR, false);
+	}
+
+	private int recipePanelX() {
+		return leftPos - RECIPE_PANEL_WIDTH - 4;
 	}
 
 	private void drawRecipePanel(GuiGraphicsExtractor graphics, int mouseX, int mouseY, int x, int y) {
