@@ -81,8 +81,7 @@ public class BeetProcessingTableBlockEntity extends BlockEntity implements World
 		blockEntity.tickSpin();
 		if (!level.isClientSide()
 				&& BeetProcessingTableBlock.isPrayerBarrel(state)
-				&& !(level.getBlockEntity(pos.below()) instanceof BeetCrankBaseBlockEntity)
-				&& !BeetProcessingTableBlock.isPrayerBarrel(level.getBlockState(pos.below()))) {
+				&& !hasCrankBaseBelow(level, pos)) {
 			BeetProcessingTableBlock.setSpinning(level, pos, state, blockEntity.isCranking());
 		}
 
@@ -505,6 +504,20 @@ public class BeetProcessingTableBlockEntity extends BlockEntity implements World
 
 	private static ItemStack loadStack(ValueInput inputData, String key) {
 		return inputData.read(key, ItemStack.OPTIONAL_CODEC).orElse(ItemStack.EMPTY);
+	}
+
+	private static boolean hasCrankBaseBelow(Level level, BlockPos pos) {
+		BlockPos scanPos = pos.below();
+		for (int i = 0; i < 4; i++) {
+			if (level.getBlockEntity(scanPos) instanceof BeetCrankBaseBlockEntity) {
+				return true;
+			}
+			if (!BeetProcessingTableBlock.isPrayerBarrel(level.getBlockState(scanPos))) {
+				return false;
+			}
+			scanPos = scanPos.below();
+		}
+		return false;
 	}
 
 	private record ProcessingRecipe(ItemStack primaryOutput, ItemStack secondaryOutput, int time) {
