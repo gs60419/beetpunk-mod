@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Added one-time temple milestone performances for the first, fourth, twelfth, and thirteenth unique LV4 temple cores.
 - Added low-frequency temple ambience: active cores now emit subtle theme-colored particles, with stronger range ambience and rare chimes at LV4.
 - Changed temple core charge indicators into subtle side-face LED dots, leaving top and bottom faces unmarked.
 - Added five visual activation states for all 13 temple cores, with LV1-LV4 shown as four scripture-charge indicator lights.

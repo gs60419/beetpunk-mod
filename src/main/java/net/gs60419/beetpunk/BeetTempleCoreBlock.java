@@ -172,6 +172,7 @@ public class BeetTempleCoreBlock extends Block implements EntityBlock {
 		level.playSound(null, pos, SoundEvents.BEACON_ACTIVATE, SoundSource.BLOCKS, 0.8F, 0.9F + scriptureLevel * 0.15F);
 		if (level instanceof ServerLevel serverLevel) {
 			ModWorldPerformances.templeLevelUp(serverLevel, pos, core.level());
+			ModTempleMilestones.onTempleLevelChanged(serverLevel, pos, tier, currentLevel, core.level());
 		}
 
 		if (player instanceof ServerPlayer serverPlayer) {

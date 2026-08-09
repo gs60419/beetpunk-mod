@@ -51,6 +51,7 @@ public class BeetTempleCoreMenu extends AbstractContainerMenu {
 		super.slotsChanged(changedContainer);
 		int level = currentLevel();
 		if (level > lastLevel && player instanceof ServerPlayer serverPlayer && container instanceof BeetTempleCoreBlockEntity core) {
+			ModTempleMilestones.onTempleLevelChanged(serverPlayer.level(), core.getBlockPos(), core.tier(), lastLevel, level);
 			ModAdvancements.award(serverPlayer, core.tier().sealTempleAdvancementId(), "sealed");
 			if (core.tier() == BeetTempleTier.PIG
 					&& level >= BeetTempleCoreBlock.MAX_TEMPLE_LEVEL

@@ -50,6 +50,30 @@ public final class ModWorldPerformances {
 		level.playSound(null, pos, SoundEvents.UI_TOAST_CHALLENGE_COMPLETE, SoundSource.BLOCKS, 0.8F, 1.15F);
 	}
 
+	public static void templeMilestone(ServerLevel level, BlockPos pos, int milestoneCount) {
+		double x = pos.getX() + 0.5D;
+		double y = pos.getY() + 1.35D;
+		double z = pos.getZ() + 0.5D;
+		int strength = switch (milestoneCount) {
+			case 1 -> 1;
+			case 4 -> 2;
+			case 12 -> 3;
+			default -> 4;
+		};
+
+		level.sendParticles(ParticleTypes.TOTEM_OF_UNDYING, x, y, z, 18 + strength * 12, 0.55D + strength * 0.12D, 0.65D + strength * 0.12D, 0.55D + strength * 0.12D, 0.09D);
+		level.sendParticles(ParticleTypes.END_ROD, x, y + 0.2D, z, 12 + strength * 8, 0.45D + strength * 0.12D, 0.45D + strength * 0.08D, 0.45D + strength * 0.12D, 0.04D);
+		if (milestoneCount >= 4) {
+			level.sendParticles(ParticleTypes.FIREWORK, x, y + 0.55D, z, 12 + strength * 10, 0.7D, 0.85D, 0.7D, 0.1D);
+		}
+
+		level.playSound(null, pos, SoundEvents.UI_TOAST_CHALLENGE_COMPLETE, SoundSource.BLOCKS, 0.8F + strength * 0.08F, 0.88F + strength * 0.08F);
+		level.playSound(null, pos, SoundEvents.BEACON_POWER_SELECT, SoundSource.BLOCKS, 0.75F + strength * 0.08F, 0.85F + strength * 0.1F);
+		if (milestoneCount >= 12) {
+			level.playSound(null, pos, SoundEvents.FIREWORK_ROCKET_TWINKLE, SoundSource.BLOCKS, 1.0F, 1.15F);
+		}
+	}
+
 	private static void completePilgrimage(ServerLevel level, BlockPos pos) {
 		double x = pos.getX() + 0.5D;
 		double y = pos.getY() + 1.45D;
