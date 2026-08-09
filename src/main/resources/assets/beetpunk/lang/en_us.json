@@ -326,5 +326,13 @@
     "container.beetpunk.beet_crank_base": "Beet Prayer Crank Base",
     "container.beetpunk.beet_extractor_barrel": "Beet Extractor Barrel",
     "container.beetpunk.beet_grinder_barrel": "Beet Grinder Barrel",
-    "container.beetpunk.beet_washing_barrel": "Beet Washing Barrel"
+    "container.beetpunk.beet_washing_barrel": "Beet Washing Barrel",
+    "screen.beetpunk.temple_core.slot": "Scripture Slot %s",
+    "screen.beetpunk.temple_core.requires": "Requires: Tier %s Scripture",
+    "screen.beetpunk.temple_core.active": "Status: Active",
+    "screen.beetpunk.temple_core.inactive": "Status: Inactive",
+    "screen.beetpunk.temple_core.effect.1": "Effect: Starts this temple's basic ability.",
+    "screen.beetpunk.temple_core.effect.2": "Effect: Expands range or strengthens the temple theme.",
+    "screen.beetpunk.temple_core.effect.3": "Effect: Adds advanced bonuses near automation.",
+    "screen.beetpunk.temple_core.effect.4": "Effect: Fully activates this temple's strongest ability."
 }
