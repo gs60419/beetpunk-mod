@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "beetpunk:block/dye_temple_core_lv3"
+    "particle": "beetpunk:block/dye_temple_core",
+    "down": "beetpunk:block/dye_temple_core",
+    "up": "beetpunk:block/dye_temple_core",
+    "north": "beetpunk:block/dye_temple_core_lv3",
+    "east": "beetpunk:block/dye_temple_core_lv3",
+    "south": "beetpunk:block/dye_temple_core_lv3",
+    "west": "beetpunk:block/dye_temple_core_lv3"
   }
 }

@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "beetpunk:block/seed_temple_core_lv4"
+    "particle": "beetpunk:block/seed_temple_core",
+    "down": "beetpunk:block/seed_temple_core",
+    "up": "beetpunk:block/seed_temple_core",
+    "north": "beetpunk:block/seed_temple_core_lv4",
+    "east": "beetpunk:block/seed_temple_core_lv4",
+    "south": "beetpunk:block/seed_temple_core_lv4",
+    "west": "beetpunk:block/seed_temple_core_lv4"
   }
 }

@@ -1,6 +1,12 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "beetpunk:block/pig_temple_core_lv2"
+    "particle": "beetpunk:block/pig_temple_core",
+    "down": "beetpunk:block/pig_temple_core",
+    "up": "beetpunk:block/pig_temple_core",
+    "north": "beetpunk:block/pig_temple_core_lv2",
+    "east": "beetpunk:block/pig_temple_core_lv2",
+    "south": "beetpunk:block/pig_temple_core_lv2",
+    "west": "beetpunk:block/pig_temple_core_lv2"
   }
 }
