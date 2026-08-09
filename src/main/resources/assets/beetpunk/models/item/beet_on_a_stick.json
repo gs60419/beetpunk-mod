@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld_rod",
+  "textures": {
+    "layer0": "beetpunk:item/beet_on_a_stick"
+  }
+}

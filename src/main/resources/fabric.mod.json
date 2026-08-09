@@ -21,6 +21,9 @@
 			"net.gs60419.beetpunk.BeetpunkClient"
 		]
 	},
+	"mixins": [
+		"beetpunk.mixins.json"
+	],
 	"accessWidener": "beetpunk.accesswidener",
 	"depends": {
 		"fabricloader": ">=0.19.3",

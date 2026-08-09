@@ -60,6 +60,7 @@ public final class ModItemGroups {
 				}
 				entries.accept(ModItems.BEET_PILGRIM_BOOK);
 				entries.accept(ModItems.BEET_PILGRIM_STAFF);
+				entries.accept(ModItems.BEET_ON_A_STICK);
 				entries.accept(ModItems.BEET_WOODEN_SWORD);
 				entries.accept(ModItems.BEET_WOODEN_SHOVEL);
 				entries.accept(ModItems.BEET_WOODEN_PICKAXE);

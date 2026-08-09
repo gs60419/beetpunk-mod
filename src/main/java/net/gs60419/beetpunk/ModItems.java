@@ -6,8 +6,11 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.animal.pig.Pig;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.BowItem;
+import net.minecraft.world.item.FoodOnAStickItem;
 import net.minecraft.world.item.HangingSignItem;
 import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
@@ -90,6 +93,7 @@ public final class ModItems {
 
 	public static final Item BEET_PILGRIM_BOOK = register("beet_pilgrim_book", properties -> new BeetPilgrimBookItem(properties.stacksTo(1)));
 	public static final Item BEET_PILGRIM_STAFF = register("beet_pilgrim_staff", properties -> new BeetPilgrimStaffItem(properties.stacksTo(1).durability(512)));
+	public static final Item BEET_ON_A_STICK = register("beet_on_a_stick", properties -> new FoodOnAStickItem<>(pigEntityType(), 7, properties.stacksTo(1).durability(25)));
 	public static final Item BEET_WOODEN_SWORD = register("beet_wooden_sword", properties -> new Item(toolProperties(properties).sword(ToolMaterial.WOOD, 3, -2.4F)));
 	public static final Item BEET_WOODEN_SHOVEL = register("beet_wooden_shovel", properties -> new ShovelItem(ToolMaterial.WOOD, 1.5F, -3.0F, toolProperties(properties)));
 	public static final Item BEET_WOODEN_PICKAXE = register("beet_wooden_pickaxe", properties -> new Item(toolProperties(properties).pickaxe(ToolMaterial.WOOD, 1.0F, -2.8F)));
@@ -141,6 +145,11 @@ public final class ModItems {
 
 	private static Item.Properties armorProperties(Item.Properties properties, ArmorType type) {
 		return properties.humanoidArmor(ModArmorMaterials.BEET_IRON, type);
+	}
+
+	@SuppressWarnings("unchecked")
+	private static EntityType<Pig> pigEntityType() {
+		return (EntityType<Pig>) BuiltInRegistries.ENTITY_TYPE.getValue(Identifier.withDefaultNamespace("pig"));
 	}
 
 	public static Item glyphFor(BeetTempleTier tier) {
