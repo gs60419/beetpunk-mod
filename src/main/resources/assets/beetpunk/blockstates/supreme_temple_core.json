@@ -4,43 +4,43 @@
       "model": "beetpunk:block/supreme_temple_core"
     },
     "glow=1": {
-      "model": "beetpunk:block/supreme_temple_core_active"
+      "model": "beetpunk:block/supreme_temple_core_lv1"
     },
     "glow=2": {
-      "model": "beetpunk:block/supreme_temple_core_active"
+      "model": "beetpunk:block/supreme_temple_core_lv2"
     },
     "glow=3": {
-      "model": "beetpunk:block/supreme_temple_core_active"
+      "model": "beetpunk:block/supreme_temple_core_lv3"
     },
     "glow=4": {
-      "model": "beetpunk:block/supreme_temple_core_active"
+      "model": "beetpunk:block/supreme_temple_core_lv4"
     },
     "glow=5": {
-      "model": "beetpunk:block/supreme_temple_core_active"
+      "model": "beetpunk:block/supreme_temple_core_lv4"
     },
     "glow=6": {
-      "model": "beetpunk:block/supreme_temple_core_active"
+      "model": "beetpunk:block/supreme_temple_core_lv4"
     },
     "glow=7": {
-      "model": "beetpunk:block/supreme_temple_core_active"
+      "model": "beetpunk:block/supreme_temple_core_lv4"
     },
     "glow=8": {
-      "model": "beetpunk:block/supreme_temple_core_active"
+      "model": "beetpunk:block/supreme_temple_core_lv4"
     },
     "glow=9": {
-      "model": "beetpunk:block/supreme_temple_core_active"
+      "model": "beetpunk:block/supreme_temple_core_lv4"
     },
     "glow=10": {
-      "model": "beetpunk:block/supreme_temple_core_active"
+      "model": "beetpunk:block/supreme_temple_core_lv4"
     },
     "glow=11": {
-      "model": "beetpunk:block/supreme_temple_core_active"
+      "model": "beetpunk:block/supreme_temple_core_lv4"
     },
     "glow=12": {
-      "model": "beetpunk:block/supreme_temple_core_active"
+      "model": "beetpunk:block/supreme_temple_core_lv4"
     },
     "glow=13": {
-      "model": "beetpunk:block/supreme_temple_core_active"
+      "model": "beetpunk:block/supreme_temple_core_lv4"
     }
   }
 }

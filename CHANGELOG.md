@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Added five visual activation states for all 13 temple cores, with LV1-LV4 progressively revealing the active core texture.
 - Fixed vanilla crop planting on Beet Farmland and Fertilized Beet Farmland.
 - Added first-pass temple world performances for scripture insertion, pilgrim-book sealing, all-13-seal completion, and revelation use.
 - Added dedicated and universal crank-base barrel modes: same-type barrel stacks keep their speed bonus, while mixed barrel stacks can process recipes for each installed barrel type.

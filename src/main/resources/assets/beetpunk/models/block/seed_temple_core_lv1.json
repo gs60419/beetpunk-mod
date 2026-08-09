@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "beetpunk:block/seed_temple_core_lv1"
+  }
+}
